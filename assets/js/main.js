@@ -1,7 +1,10 @@
 $(document).ready(function () {
+ 
+
+
 
   // ================================== HEADER BG ON SCROLL ==================================
-  
+
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > 510) {
       $(".header-container").addClass("active");
@@ -10,7 +13,7 @@ $(document).ready(function () {
       $(".header-container").removeClass("active");
     }
   });
-  
+
 
   // ================================ USER ICON DROPDOWN MENU ================================
   $('.far').click(function () {
@@ -32,4 +35,16 @@ $(document).ready(function () {
       }
     });
   });
+
+
+  
 });
+
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 49.430680, lng: 1.080230 },
+    zoom: 8,
+  });
+}
