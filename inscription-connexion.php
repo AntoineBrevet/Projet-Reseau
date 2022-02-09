@@ -1,11 +1,3 @@
-<?php
-$domain = "D}";
-if (preg_match('/[!-/]/', $domain) == 1){
-    echo("bonjour");
-}
-echo(preg_match('/[!-]/', $domain));
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
