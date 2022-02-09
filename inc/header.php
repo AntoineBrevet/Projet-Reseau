@@ -15,15 +15,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- =================================== ICONS =================================== -->
   <script src="https://kit.fontawesome.com/ceee3d5b7f.js" crossorigin="anonymous"></script>
-
+  
   <!-- =================================== IMPORT CSS =================================== -->
   <link rel="stylesheet" type="text/css" href="assets/css/glide.core.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/glide.theme.min.css">
-
+  
   <!-- =================================== CSS =================================== -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <link rel="stylesheet" href="assets/css/style.css">
 
   <title>FrameIP</title>
@@ -47,7 +48,7 @@
         <ul class="ul">
           <li class="li"><a class="a" href="dashboard.php">Inscription/Connexion</a></li>
           <li class="li"><a class="a" href="aboutus.php">Qui sommes nous ?</a></li>
-          <li class="li"><a class="a" href="deconnexion.php">Contact</a></li>
+          <li class="li"><a class="a" href="contact.php">Contact</a></li>
         </ul>
       </div>
     </div>

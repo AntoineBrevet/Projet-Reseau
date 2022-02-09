@@ -1,7 +1,7 @@
 <?php
 require('inc/pdo.php');
 
-include('inc/header.php'); ?>
+include('inc/headerall.php'); ?>
 <div class="legale">
   <h1 style="text-align: center;">Mentions Légales</h1>
 
