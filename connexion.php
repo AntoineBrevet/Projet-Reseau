@@ -20,7 +20,7 @@ if (!empty($_POST)) {
         //Décrypte le MDP récupéré
         if (password_verify($mdp,$users['password'])) {
             echo ("Le MDP est bon!");
-            header('Location: inscription-connexion.php');
+            header('Location: chart.php');
         } else {
             echo ("Le MDP n'est pas le bon!");
         }
