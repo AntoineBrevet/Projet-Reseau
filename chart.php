@@ -22,7 +22,7 @@ include('inc/headerCharts.php');
                 <p class="content-button">Graphiques</p>
             </button>
 
-            
+
             <button class="btn-title-dashboard" id="btn-log"><i class="fas fa-database"></i>
                 <p class="content-button">Logs</p>
             </button>
@@ -94,11 +94,12 @@ include('inc/headerCharts.php');
                 </div> -->
             <div id="container-chart">
                 <div class="chart-top">
+
                     <div class="litte-chart">
-                        <canvas id="myChart3"></canvas>
+                        <canvas id="test"></canvas>
                     </div>
                     <div class="litte-chart">
-                        <canvas id="tramDay"></canvas>
+                        <canvas id="lostTTL"></canvas>
                     </div>
                     <div class="litte-chart">
                         <canvas id="myChart2"></canvas>
@@ -110,7 +111,7 @@ include('inc/headerCharts.php');
                         <canvas id="tramType"></canvas>
                     </div>
                     <div class="big-chart">
-                        <canvas id="myChart"></canvas>
+                        <canvas id="trames"></canvas>
                     </div>
                 </div>
             </div>
