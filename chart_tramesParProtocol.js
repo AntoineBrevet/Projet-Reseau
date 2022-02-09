@@ -64,11 +64,18 @@ $(document).ready(function () {
             const config = {
                 type: 'pie',
                 data: data,
-                options: {}
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Trames / Protocole'
+                        }
+                    }
+                }
             };
 
             const myChart = new Chart(
-                document.getElementById('myChart'),
+                document.getElementById('chart_tramesParProtocol'),
                 config
             );
         });

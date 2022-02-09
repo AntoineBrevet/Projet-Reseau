@@ -1,5 +1,5 @@
 <?php
-include("pdo.php");
+include("inc/pdo.php");
 include("fonctions.php");
 
 $json = json_decode(file_get_contents("http://51.255.160.47:8282/resources/frames.json"), true);

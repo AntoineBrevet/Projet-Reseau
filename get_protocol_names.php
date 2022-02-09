@@ -1,5 +1,5 @@
 <?php
-include("pdo.php");
+include("inc/pdo.php");
 include("fonctions.php");
 
 $query = "SELECT protocol_name FROM res_trames";
