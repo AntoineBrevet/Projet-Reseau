@@ -1,7 +1,6 @@
 <?php
+include('inc/pdo.php');
 include('fonctions.php');
-
-$pdo = new PDO('mysql:host=localhost;dbname=reseaux', "root", "root");
 
 //Check si le formulaire n'est pas vide
 if (!empty($_POST)) {

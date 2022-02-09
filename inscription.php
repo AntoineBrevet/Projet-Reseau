@@ -1,7 +1,6 @@
 <?php
+include('inc/pdo.php');
 include('fonctions.php');
-
-$pdo = new PDO('mysql:host=localhost;dbname=reseaux', "root", "root");
 
 
 

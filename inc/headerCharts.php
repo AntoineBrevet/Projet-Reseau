@@ -63,7 +63,7 @@
       <div id="hide" class="menu">
         <h3>Mon profil</h3>
         <ul class="ul">
-          <li class="li"><a class="a" href="dashboard.php">Inscription/Connexion</a></li>
+          <li class="li"><a class="a" href="inscription-connexion.php">Inscription/Connexion</a></li>
           <li class="li"><a class="a" href="chart.php">Mon espace</a></li>
           <li class="li"><a class="a" href="aboutus.php">Qui sommes nous ?</a></li>
           <li class="li"><a class="a" href="contact.php">Contact</a></li>

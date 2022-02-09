@@ -99,7 +99,7 @@ include('inc/headerCharts.php');
                         <canvas id="test"></canvas>
                     </div>
                     <div class="litte-chart">
-                        <canvas id="lostTTL"></canvas>
+                        <canvas id="chart_lostTTLParProtocol"></canvas>
                     </div>
                     <div class="litte-chart">
                         <canvas id="myChart2"></canvas>
