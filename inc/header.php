@@ -18,13 +18,16 @@
 
   <!-- =================================== ICONS =================================== -->
   <script src="https://kit.fontawesome.com/ceee3d5b7f.js" crossorigin="anonymous"></script>
-  
+
+  <!-- =================================== MAP =================================== -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
   <!-- =================================== IMPORT CSS =================================== -->
   <link rel="stylesheet" type="text/css" href="assets/css/glide.core.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/glide.theme.min.css">
-  
+
   <!-- =================================== CSS =================================== -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" href="assets/css/chart.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <title>FrameIP</title>
@@ -47,6 +50,7 @@
         <h3>Mon profil</h3>
         <ul class="ul">
           <li class="li"><a class="a" href="dashboard.php">Inscription/Connexion</a></li>
+          <li class="li"><a class="a" href="chart.php">Mon espace</a></li>
           <li class="li"><a class="a" href="aboutus.php">Qui sommes nous ?</a></li>
           <li class="li"><a class="a" href="contact.php">Contact</a></li>
         </ul>

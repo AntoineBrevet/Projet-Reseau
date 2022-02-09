@@ -19,14 +19,20 @@
   <!-- =================================== ICONS =================================== -->
   <script src="https://kit.fontawesome.com/ceee3d5b7f.js" crossorigin="anonymous"></script>
 
+  <!-- =================================== MAP =================================== -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  <!-- =================================== SCRIPT =================================== -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <!-- =================================== IMPORT CSS =================================== -->
   <link rel="stylesheet" type="text/css" href="assets/css/glide.core.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/glide.theme.min.css">
 
   <!-- =================================== CSS =================================== -->
-  <link rel="stylesheet" href="assets/css/chart.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bg.css">
+  <link rel="stylesheet" href="assets/css/chart.css">
 
   <title>FrameIP</title>
 </head>

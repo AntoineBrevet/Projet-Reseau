@@ -17,16 +17,28 @@
 
 
 
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLLBQsDzQ1d0K7J_ydTYE4oZo7mt9vLZ8&callback=initMap&v=weekly&channel=2" async></script> -->
 
-<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<!-- ===================================== SCRIPT ===================================== -->
+
+<!-- ===================================== MAP ===================================== -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDcePR_noPnxzRpBanDWMAIhCULpmms7Q&callback=initMap&v=weekly&channel=2" async></script>
+
+
+<!-- ===================================== JQUERY ===================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+<!-- ===================================== SLIDER / CAROUSEL ===================================== -->
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDcePR_noPnxzRpBanDWMAIhCULpmms7Q&callback=initMap&v=weekly&channel=2" async></script>
-<!-- <script src="assets/js/test.js"></script> -->
+<!-- ===================================== CHART JS ===================================== -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- ===================================== SCRIPT PERSO ===================================== -->
 <script src="assets/js/slide.js" type="text/javascript"></script>
+<script src="assets/js/graph.js" type="text/javascript"></script>
+<script src="assets/js/charts.js"></script>
 <script src="assets/js/main.js" type="text/javascript"></script>
 
 </body>
