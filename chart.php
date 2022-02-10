@@ -96,7 +96,7 @@ include('inc/headerCharts.php');
                 <div class="chart-top">
 
                     <div class="litte-chart">
-                        <canvas id="test"></canvas>
+                        <canvas id="chart_tramesParJour"></canvas>
                     </div>
                     <div class="litte-chart">
                         <canvas id="chart_lostTTLParProtocol"></canvas>
