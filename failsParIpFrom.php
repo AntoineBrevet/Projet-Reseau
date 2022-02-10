@@ -1,7 +1,7 @@
 <?php
 
 include("inc/pdo.php");
-
+include("fonctions.php");
 
 $ip_from = array();
 $ip_fromFiltered = array();
@@ -26,6 +26,13 @@ for($i = 0; $i < count($ip_fromFiltered); $i++) {
             $data_final[$ip_fromFiltered[$i]]++;
         }
     }
+}
+
+for($i = 0; $i < count($data_final); $i++) {
+    $oldkey = key($data_final);
+    $newkey = ipConvert($oldkey);          
+    $data_final[$newkey] = $data_final[$oldkey];
+    unset($data_final[$oldkey]);
 }
 print(json_encode($data_final));
 

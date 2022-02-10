@@ -1,6 +1,7 @@
 <?php
 
 include("inc/pdo.php");
+include("fonctions.php");
 
 $ip_dest = array();
 $ip_destFiltered = array();
@@ -19,13 +20,19 @@ $data_final = array_fill_keys($ip_destFiltered, 0);
 for($i = 0; $i < count($ip_destFiltered); $i++) {
     $query = "SELECT status FROM res_trames WHERE ip_dest = '$ip_destFiltered[$i]'";
     $result = $pdo->query($query);
-    foreach($result as $row){ 
-        
+    foreach($result as $row){         
         if ($row["status"] == 'disabled') {
             $data_final[$ip_destFiltered[$i]]++;
         }
     }
 }
-print(json_encode($data_final));
 
-?>
+for($i = 0; $i < count($data_final); $i++) {
+    $oldkey = key($data_final);
+    $newkey = ipConvert($oldkey);          
+    $data_final[$newkey] = $data_final[$oldkey];
+    unset($data_final[$oldkey]);
+}
+
+
+print(json_encode($data_final));

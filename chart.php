@@ -102,7 +102,7 @@ include('inc/headerCharts.php');
                         <canvas id="chart_lostTTLParProtocol"></canvas>
                     </div>
                     <div class="litte-chart">
-                        <canvas id="chart_status"></canvas>
+                        <canvas id="chart_failParProtocol"></canvas>                        
                     </div>
                     <div class="litte-chart">
                         <canvas id="chart_failsParIpFrom"></canvas>
@@ -110,11 +110,14 @@ include('inc/headerCharts.php');
                     <div class="litte-chart">
                         <canvas id="chart_failsParIpDest"></canvas>
                     </div>
+                    <div class="litte-chart">
+                        <canvas id="chart_failsParJour"></canvas>
+                    </div>
                 </div>
 
                 <div class="chart-bottom">
                     <div class="big-chart">
-                        <canvas id="chart_failParProtocol"></canvas>
+                        <canvas id="chart_status"></canvas>
                     </div>
                     <div class="big-chart">
                         <canvas id="trames"></canvas>
@@ -124,9 +127,6 @@ include('inc/headerCharts.php');
                     </div>
                     <div class="big-chart">
                         <canvas id="chart_tramesParIpDest"></canvas>
-                    </div>
-                    <div class="big-chart">
-                        <canvas id="chart_failsParJour"></canvas>
                     </div>
                 </div>
             </div>

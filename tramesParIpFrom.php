@@ -1,5 +1,5 @@
 <?php
-
+include("fonctions.php");
 include("inc/pdo.php");
 
 $ip_from = array();
@@ -21,7 +21,12 @@ foreach($ip_from as $ip_fro) {
         $data_final[$ip_fro]++;
     }
 }
-
+for($i = 0; $i < count($data_final); $i++) {
+    $oldkey = key($data_final);
+    $newkey = ipConvert($oldkey);          
+    $data_final[$newkey] = $data_final[$oldkey];
+    unset($data_final[$oldkey]);
+}
 print(json_encode($data_final));
 
 ?>
