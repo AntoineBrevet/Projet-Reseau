@@ -107,6 +107,9 @@ include('inc/headerCharts.php');
                     <div class="litte-chart">
                         <canvas id="chart_failsParIpFrom"></canvas>
                     </div>
+                    <div class="litte-chart">
+                        <canvas id="chart_failsParIpDest"></canvas>
+                    </div>
                 </div>
 
                 <div class="chart-bottom">
@@ -121,6 +124,9 @@ include('inc/headerCharts.php');
                     </div>
                     <div class="big-chart">
                         <canvas id="chart_tramesParIpDest"></canvas>
+                    </div>
+                    <div class="big-chart">
+                        <canvas id="chart_failsParJour"></canvas>
                     </div>
                 </div>
             </div>

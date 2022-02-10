@@ -1,25 +1,21 @@
-$(document).ready(function() {
-var ctx7 = document.getElementById('chart_failsParIpFrom').getContext('2d');
+$(document).ready(function(){
+    var ctx9 = document.getElementById('chart_failsParJour').getContext('2d');
     $.ajax({
         type: 'POST',
-        url: 'failsParIpFrom.php',
+        url: 'failsParJour.php',
         dataType: 'JSON',
         data: {},
         success: function (data) {
-            var chart = new Chart(ctx7, {
+            var chart = new Chart(ctx9, {
                 // The type of chart we want to create
-                type: 'bar',
+                type: 'line',
 
                 // The data for our dataset
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
                         label : 'Disabled frames',
-                        backgroundColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(54, 162, 235)',
-                            'rgb(0, 45, 179)' 
-                          ],
+                        backgroundColor: 'rgb(255, 99, 132)',
                         data: Object.values(data),                        
                     }]
                 },
@@ -28,9 +24,14 @@ var ctx7 = document.getElementById('chart_failsParIpFrom').getContext('2d');
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Disabled frames / IP_from'
+                            text: 'Disabled frames / Day'
                         }
                     },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
                 }
             });
         },

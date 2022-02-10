@@ -387,6 +387,93 @@ $(document).ready(function () {
         }
     })
 
+    var ctx8 = document.getElementById('chart_failsParIpDest').getContext('2d');
+    $.ajax({
+        type: 'POST',
+        url: 'failsParIpDest.php',
+        dataType: 'JSON',
+        data: {},
+        success: function (data) {
+            var chart = new Chart(ctx8, {
+                // The type of chart we want to create
+                type: 'bar',
+
+                // The data for our dataset
+                data: {
+                    labels: Object.keys(data),
+                    datasets: [{
+                        label : 'Disabled frames',
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)',
+                            'rgb(201, 84, 15)',
+                            'rgb(0, 45, 179)' 
+                          ],
+                        data: Object.values(data),                        
+                    }]
+                },
+
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Disabled frames / IP_dest'
+                        }
+                    },
+                }
+            });
+        },
+        error: function (xhr, textStatus, thrownError) {
+            console.log(xhr);
+            console.log(textStatus);
+            console.log(thrownError);
+        }
+    })
+
+    var ctx9 = document.getElementById('chart_failsParJour').getContext('2d');
+    $.ajax({
+        type: 'POST',
+        url: 'failsParJour.php',
+        dataType: 'JSON',
+        data: {},
+        success: function (data) {
+            var chart = new Chart(ctx9, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: Object.keys(data),
+                    datasets: [{
+                        label : 'Disabled frames',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        data: Object.values(data),                        
+                    }]
+                },
+
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Disabled frames / Day'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        },
+        error: function (xhr, textStatus, thrownError) {
+            console.log(xhr);
+            console.log(textStatus);
+            console.log(thrownError);
+        }
+    })
+
     // DASHBOARD ===================================================================================
     //CLICK => LOG
     $('#btn-log').on('click', function (e) {
