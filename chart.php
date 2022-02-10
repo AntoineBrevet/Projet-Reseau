@@ -104,6 +104,9 @@ include('inc/headerCharts.php');
                     <div class="litte-chart">
                         <canvas id="chart_status"></canvas>
                     </div>
+                    <div class="litte-chart">
+                        <canvas id="chart_failsParIpFrom"></canvas>
+                    </div>
                 </div>
 
                 <div class="chart-bottom">
