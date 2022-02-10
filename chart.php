@@ -95,24 +95,25 @@ include('inc/headerCharts.php');
             <div id="container-chart">
                 <div class="chart-top">
 
-                    <div class="litte-chart">
+                    <div class="big-chart">
                         <canvas id="chart_tramesParJour"></canvas>
                     </div>
-                    <div class="litte-chart">
+                    <div class="big-chart">
                         <canvas id="chart_lostTTLParProtocol"></canvas>
                     </div>
-                    <div class="litte-chart">
+                    <div class="big-chart">
                         <canvas id="chart_failParProtocol"></canvas>                        
                     </div>
-                    <div class="litte-chart">
+                    <div class="big-chart">
                         <canvas id="chart_failsParIpFrom"></canvas>
                     </div>
-                    <div class="litte-chart">
+                    <div class="big-chart">
                         <canvas id="chart_failsParIpDest"></canvas>
                     </div>
-                    <div class="litte-chart">
+                    <div class="big-chart">
                         <canvas id="chart_failsParJour"></canvas>
                     </div>
+
                 </div>
 
                 <div class="chart-bottom">
