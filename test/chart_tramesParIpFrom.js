@@ -1,22 +1,26 @@
 $(document).ready(function() {
-var ctx4 = document.getElementById('chart_failParProtocol').getContext('2d');
+var ctx5 = document.getElementById('chart_tramesParIpFrom').getContext('2d');
     $.ajax({
         type: 'POST',
-        url: 'failParProtocol.php',
+        url: 'tramesParIpFrom.php',
         dataType: 'JSON',
         data: {},
         success: function (data) {
-            var chart = new Chart(ctx4, {
+            var chart = new Chart(ctx5, {
                 // The type of chart we want to create
-                type: 'bar',
+                type: 'pie',
 
                 // The data for our dataset
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label: 'Disabled frames',
-                        backgroundColor: 'rgb(255, 99, 132)',
-                        data: Object.values(data)                        
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)'
+                          ],
+                        data: Object.values(data),                        
+                        hoverOffset: 4
                     }]
                 },
 
@@ -24,14 +28,9 @@ var ctx4 = document.getElementById('chart_failParProtocol').getContext('2d');
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Disabled frames / Protocol'
+                            text: 'Trames / IP_from'
                         }
                     },
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
                 }
             });
         },

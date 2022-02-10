@@ -113,6 +113,9 @@ include('inc/headerCharts.php');
                     <div class="big-chart">
                         <canvas id="trames"></canvas>
                     </div>
+                    <div class="big-chart">
+                        <canvas id="chart_tramesParIpFrom"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
