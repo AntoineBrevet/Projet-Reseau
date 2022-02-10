@@ -108,7 +108,7 @@ include('inc/headerCharts.php');
 
                 <div class="chart-bottom">
                     <div class="big-chart">
-                        <canvas id="tramType"></canvas>
+                        <canvas id="chart_failParProtocol"></canvas>
                     </div>
                     <div class="big-chart">
                         <canvas id="trames"></canvas>
