@@ -1,91 +1,51 @@
 $(document).ready(function () {
 
     // CHARTS
-    let protocolNames = [];
-    let protocolNamesFiltered = [];
-    let numberOf_UDP_Protocols = 0;
-    let numberOf_TLS_Protocols = 0;
-    let numberOf_ICMP_Protocols = 0;
-    let numberOf_TCP_Protocols = 0;
-    let numberOf_Others_Protocols = 0;
 
-    function updateProtocolNames() {
+    var ctx0 = document.getElementById('chart_tramesParProtocol').getContext('2d');
+    $.ajax({
+        type: 'POST',
+        url: 'tramesParProtocol.php',
+        dataType: 'JSON',
+        data: {},
+        success: function (data) {
+            var chart = new Chart(ctx0, {
+                // The type of chart we want to create
+                type: 'pie',
 
-        // Appel AJAX 
-        $.get("get_protocol_names.php", function (data) {
-            $.each(JSON.parse(data), function (key, value) {
-                protocolNames.push(value["protocol_name"]);
-            });
-        })
-
-            // Suppression des doublons dans les noms de protocoles
-            .then(function () {
-                protocolNamesFiltered = protocolNames.filter(function (item, pos) {
-                    return protocolNames.indexOf(item) == pos;
-                })
-            })
-
-            // Proportion de protocoles fonction de leur nom
-            .then(function () {
-
-                for (let i = 0; i < protocolNames.length; i++) {
-                    if (protocolNames[i] == "UDP") {
-                        numberOf_UDP_Protocols++;
-                    } else if (protocolNames[i] == "TLSv1.2") {
-                        numberOf_TLS_Protocols++;
-                    } else if (protocolNames[i] == "ICMP") {
-                        numberOf_ICMP_Protocols++;
-                    } else if (protocolNames[i] == "TCP") {
-                        numberOf_TCP_Protocols++;
-                    } else {
-                        numberOf_Others_Protocols++;
-                    }
-                }
-            })
-
-            // Création du chart
-            .then(function () {
-                // Data Set
-                const data = {
-                    labels: protocolNamesFiltered,
+                // The data for our dataset
+                data: {
+                    labels: Object.keys(data),
                     datasets: [{
-                        label: 'Protocols Ratio',
-                        data: [numberOf_UDP_Protocols, numberOf_TLS_Protocols, numberOf_ICMP_Protocols, numberOf_TCP_Protocols],
+                        label: 'Number of frames',
                         backgroundColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(54, 162, 235)',
                             'rgb(255, 205, 86)',
-                            'rgb(88, 122, 34)'
+                            'rgb(255, 99, 132)',
+                            'rgb(0, 121, 156)',
+                            'rgb(0, 156, 118)'
                         ],
-                        hoverOffset: 4,
+                        data: Object.values(data),
+                        hoverOffset: 4
                     }]
-                };
+                },
 
-                // Config
-                const config = {
-                    type: 'pie',
-                    data: data,
-                    options: {
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: 'Trames / Protocole'
-                            }
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Trames / Protocol'
                         }
                     }
-                };
+                }
 
-                const myChart = new Chart(
-                    document.getElementById('trames'),
-                    config
-                );
             });
-    }
-
-    updateProtocolNames();
-
-
-
+        },
+        error: function (xhr, textStatus, thrownError) {
+            console.log(xhr);
+            console.log(textStatus);
+            console.log(thrownError);
+        }
+    })
 
     var ctx = document.getElementById('chart_lostTTLParProtocol').getContext('2d');
     $.ajax({
@@ -100,12 +60,12 @@ $(document).ready(function () {
 
                 // The data for our dataset
                 data: {
-                    labels: ["UDP", "TLSv1.2", "ICMP", "TCP"],
+                    labels: Object.keys(data),
                     datasets: [{
                         label: 'Nombre de TTL perdues',
                         backgroundColor: '#fdcd3b',
                         borderColor: '#fdcd3b',
-                        data: [data['UDP'], data['TLSv1.2'], data['ICMP'], data['TCP']]
+                        data: Object.values(data)
                     }]
                 },
 
@@ -278,8 +238,8 @@ $(document).ready(function () {
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
                             'rgb(255, 205, 86)'
-                          ],
-                        data: Object.values(data),                        
+                        ],
+                        data: Object.values(data),
                         hoverOffset: 4
                     }]
                 },
@@ -321,9 +281,9 @@ $(document).ready(function () {
                             'rgb(54, 162, 235)',
                             'rgb(255, 205, 86)',
                             'rgb(201, 84, 15)',
-                            'rgb(0, 45, 179)' 
-                          ],
-                        data: Object.values(data),                        
+                            'rgb(0, 45, 179)'
+                        ],
+                        data: Object.values(data),
                         hoverOffset: 4
                     }]
                 },
@@ -360,13 +320,13 @@ $(document).ready(function () {
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label : 'Disabled frames',
+                        label: 'Disabled frames',
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
-                            'rgb(0, 45, 179)' 
-                          ],
-                        data: Object.values(data),                        
+                            'rgb(0, 45, 179)'
+                        ],
+                        data: Object.values(data),
                     }]
                 },
 
@@ -402,15 +362,15 @@ $(document).ready(function () {
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label : 'Disabled frames',
+                        label: 'Disabled frames',
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
                             'rgb(255, 205, 86)',
                             'rgb(201, 84, 15)',
-                            'rgb(0, 45, 179)' 
-                          ],
-                        data: Object.values(data),                        
+                            'rgb(0, 45, 179)'
+                        ],
+                        data: Object.values(data),
                     }]
                 },
 
@@ -446,9 +406,9 @@ $(document).ready(function () {
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label : 'Disabled frames',
+                        label: 'Disabled frames',
                         backgroundColor: 'rgb(255, 99, 132)',
-                        data: Object.values(data),                        
+                        data: Object.values(data),
                     }]
                 },
 

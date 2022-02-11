@@ -124,7 +124,7 @@ $trames = $var->fetchAll();
                         <canvas id="chart_status"></canvas>
                     </div>
                     <div class="big-chart">
-                        <canvas id="trames"></canvas>
+                        <canvas id="chart_tramesParProtocol"></canvas>
                     </div>
                     <div class="big-chart">
                         <canvas id="chart_tramesParIpFrom"></canvas>
