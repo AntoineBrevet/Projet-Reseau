@@ -1,0 +1,29 @@
+#page-mdp-reset{
+    margin-top: 76px;
+    display: flex;
+    padding-top: 150px;
+}
+
+h2,p{
+    color: white;
+}
+
+#img-mdp-reset{
+    width: 50%;
+}
+
+#img-mdp-reset-container{
+    width: 70%;
+    margin: auto;
+}
+
+#txt-mdp-reset{
+    width: 50%;
+    text-align: center;
+}
+
+.form-floating{
+    width: 70%;
+    margin: auto;
+}
+
