@@ -32,7 +32,7 @@
                 <div class="modal-body" id="inscription-body">
                     <form action="inscription.php" method="post">
                         <div class="form-floating mb-3">
-                            <input type="email" name="nom" id="nom" placeholder="Nom" class="form-control">
+                            <input type="text" name="nom" id="nom" placeholder="Nom" class="form-control">
                             <label for="nom">Nom</label>
                         </div>
                         <div class="form-floating mb-3">
