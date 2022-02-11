@@ -36,9 +36,11 @@ function hasCS4(str) {
 $(document).on('input', '#mdp1', function () {
     if (hasUpperCase($("#mdp1").val())) {
         $("#contrainte1").css("color", "green");
+        $("#contrainte1img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte1").css("color", "red");
+        $("#contrainte1").css("color", "grey");
+        $("#contrainte1img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
 
@@ -47,9 +49,11 @@ $(document).on('input', '#mdp1', function () {
 $(document).on('input', '#mdp1', function () {
     if (hasLowerCase($("#mdp1").val())) {
         $("#contrainte2").css("color", "green");
+        $("#contrainte2img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte2").css("color", "red");
+        $("#contrainte2").css("color", "grey");
+        $("#contrainte2img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
 
@@ -58,9 +62,11 @@ $(document).on('input', '#mdp1', function () {
 $(document).on('input', '#mdp1', function () {
     if (hasNumber($("#mdp1").val())) {
         $("#contrainte3").css("color", "green");
+        $("#contrainte3img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte3").css("color", "red");
+        $("#contrainte3").css("color", "grey");
+        $("#contrainte3img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
 
@@ -69,9 +75,11 @@ $(document).on('input', '#mdp1', function () {
 $(document).on('input', '#mdp1', function () {
     if ((hasCS1($("#mdp1").val())) || (hasCS2($("#mdp1").val())) || (hasCS3($("#mdp1").val())) || (hasCS4($("#mdp1").val()))) {
         $("#contrainte4").css("color", "green");
+        $("#contrainte4img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte4").css("color", "red");
+        $("#contrainte4").css("color", "grey");
+        $("#contrainte4img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
 
@@ -80,20 +88,24 @@ $(document).on('input', '#mdp1', function () {
 $(document).on('input', '#mdp1', function () {
     if ($("#mdp1").val().length >= 8) {
         $("#contrainte5").css("color", "green");
+        $("#contrainte5img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte5").css("color", "red");
+        $("#contrainte5").css("color", "grey");
+        $("#contrainte5img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
 
 //Vérif si les MDP sont identiques
 
 $(document).on('input', '#mdp1,#mdp2', function () {
-    if ($("#mdp1").val() == $("#mdp2").val()) {
+    if (($("#mdp1").val() == $("#mdp2").val()) && $("#mdp2").val().length >= 1) {
         $("#contrainte6").css("color", "green");
+        $("#contrainte6img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte6").css("color", "red");
+        $("#contrainte6").css("color", "grey");
+        $("#contrainte6img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
 

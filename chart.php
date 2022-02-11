@@ -1,15 +1,14 @@
 <?php
 include('inc/pdo.php');
-
+include("fonctions.php");
+include('inc/headerCharts.php');
 
 
 $sql = "SELECT * FROM res_trames ORDER BY date DESC";
 $var = $pdo->prepare($sql);
 $var->execute();
 $trames = $var->fetchAll();
-// debug($trames);
 
-include('inc/headerCharts.php');
 // include('modal.php'); 
 ?>
 
@@ -77,6 +76,10 @@ include('inc/headerCharts.php');
                             <td><?php echo $trame['header_checksum']; ?></td>
                             <td><?php echo $trame['port_from']; ?></td>
                             <td><?php echo $trame['port_dest']; ?></td>
+                            <?php
+                                $trame['ip_from'] = ipConvert($trame['ip_from']);
+                                $trame['ip_dest'] = ipConvert($trame['ip_dest']);
+                            ?>
                             <td><?php echo $trame['ip_from']; ?></td>
                             <td><?php echo $trame['ip_dest']; ?></td>
                             </tr>
@@ -120,7 +123,7 @@ include('inc/headerCharts.php');
                         <canvas id="chart_status"></canvas>
                     </div>
                     <div class="big-chart rond">
-                        <canvas id="trames"></canvas>
+                        <canvas id="chart_tramesParProtocol"></canvas>
                     </div>
                     <div class="big-chart rond">
                         <canvas id="chart_tramesParIpFrom"></canvas>

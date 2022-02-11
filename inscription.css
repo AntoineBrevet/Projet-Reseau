@@ -1,0 +1,36 @@
+#contrainte1, #contrainte2, #contrainte3, #contrainte4, #contrainte5, #contrainte6{
+    color: grey;
+    margin-right: 10px;
+}
+
+#onglet-css{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-footer{
+    justify-content: center;
+}
+
+#mdp-reset-css{
+    text-align: center;
+}
+
+#contrainte{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#femme,#homme{
+    margin-top: 5px;
+}
+
+#sexe{
+    margin-right: 20px;
+    margin-left: 13px;
+}
+
+.modal-dialog{
+    max-width: 600px;
+}
