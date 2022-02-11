@@ -435,6 +435,8 @@ $(document).ready(function () {
     })
 
     // DASHBOARD ===================================================================================
+    $('#log_table').DataTable();
+    
     //CLICK => LOG
     $('#btn-log').on('click', function (e) {
         e.preventDefault()

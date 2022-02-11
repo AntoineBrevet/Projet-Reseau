@@ -28,7 +28,7 @@
   <!-- =================================== IMPORT CSS =================================== -->
   <link rel="stylesheet" type="text/css" href="assets/css/glide.core.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/glide.theme.min.css">
-
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"> 
   <!-- =================================== CSS =================================== -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bg.css">

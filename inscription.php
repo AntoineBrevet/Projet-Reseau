@@ -7,13 +7,11 @@ include('fonctions.php');
 //Check si le formulaire n'est pas vide
 if (!empty($_POST)) {
 
-    //Check si tous les champs sont remplis ou non
-    if (empty($_POST["nom"]) || empty($_POST["prenom"]) || empty($_POST["sexe"]) || empty($_POST["date"]) || empty($_POST["email"]) || strlen($_POST["mdp1"]) < 8 || (preg_match('/[a-z]/', $_POST["mdp1"]) == 0) || (preg_match('/[A-Z]/', $_POST["mdp1"]) == 0) || (preg_match('/[0-9]/', $_POST["mdp1"]) == 0) || ((preg_match('/[!-.]/', $_POST["mdp1"]) == 0) && (preg_match('/[:-@]/', $_POST["mdp1"]) == 0) && (preg_match('/[[-`]/', $_POST["mdp1"]) == 0) && (preg_match('/[{-~]/', $_POST["mdp1"]) == 0)) || empty($_POST["mdp2"])) {
-        echo ("Tous les champs ne sont pas remplis!!!");
-        echo(strlen($_POST["mdp1"]));
+    //Check si tous les champs sont remplis ou non ou les conditions sont remplis ou non
+    if (empty($_POST["nom"]) || empty($_POST["prenom"]) || empty($_POST["sexe"]) || empty($_POST["date"]) || empty($_POST["email"]) || strlen($_POST["mdp1"]) < 8 || (preg_match('/[a-z]/', $_POST["mdp1"]) == 0) || (preg_match('/[A-Z]/', $_POST["mdp1"]) == 0) || (preg_match('/[0-9]/', $_POST["mdp1"]) == 0) || ((preg_match('/[!-.]/', $_POST["mdp1"]) == 0) && (preg_match('/[:-@]/', $_POST["mdp1"]) == 0) && (preg_match('/[[-`]/', $_POST["mdp1"]) == 0) && (preg_match('/[{-~]/', $_POST["mdp1"]) == 0)) || $_POST["mdp2"] !== $_POST["mdp1"]) {
+        echo ("Tous les champs ne sont pas remplis ou respectés!!!");
     } else {
         echo ("Tous les champs sont bien remplis!!!");
-        echo(strlen($_POST["mdp1"]));
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
         $sexe = $_POST['sexe'];
