@@ -43,7 +43,7 @@ $trames = $var->fetchAll();
             <!-- CONTAINER DES LOGS display none-->
             <div id="container-log">
 
-                <table class="table">
+                <table id="log_table" class="table">
                     <thead>
                         <tr>
                             <th class="border border-left">Date</th>
