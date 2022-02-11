@@ -2,6 +2,11 @@
 include('inc/pdo.php');
 include('fonctions.php');
 include('inc/header.php');
+include('testphpMailer.php');
+
+error_reporting(E_ALL|E_STRICT);
+ini_set('display_errors', 1);
+
 ?>
 
 
@@ -19,9 +24,7 @@ include('inc/header.php');
                     <input type="email" name="email" id="email" placeholder="Email" class="form-control">
                     <label for="email" id="email-label">Veuillez entrer votre adresse e-mail</label>
                 </div>
-                <button class="btn btn-primary btn-lg btn-block">
-                    Envoyer mail
-                </button>
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Envoyer mail">
             </form>
 
         </div>
@@ -34,6 +37,7 @@ include('inc/footer.php');
 ?>
 
 <?php
+
 
 if (empty($_POST["email"])) {
     echo ("Tous les champs ne sont pas remplis!");
@@ -53,19 +57,27 @@ if (empty($_POST["email"])) {
     $ver = $pdo->prepare("SELECT * FROM res_users WHERE email='$email'");
     $ver->execute();
     $emailcheck = $ver->fetchAll();
-
-    if ($emailcheck){
+    if (!empty($emailcheck)){
         $datenow = date("Y-m-d H:i:s");
         $date = date('Y-m-d H:i:s',strtotime('+5 minutes',strtotime($datenow)));
 
         //Insert le token et la date limite du token dans la BDD
         $req = $pdo->prepare("UPDATE `res_users` SET `token` = '$token', `token_at` = '$date' WHERE email='$email'");
         $req->execute();
-        header('location: index.php');
+
+        $link = "localhost/Projet-Reseau/mdp-change.php?token=" . $token;
+
+        $result = smtpmailer(GMailUSER, 'Support FrameIP', 'FrameIP Assistance', 'Reset mdp', $link);
+        if (true !== $result)
+        {
+            // erreur -- traiter l'erreur
+            echo $result;
+        }
     }
     else{
         echo("Email non existant");
-    }   
+    }  
+    
 }
 
 ?>

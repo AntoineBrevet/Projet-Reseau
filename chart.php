@@ -43,7 +43,7 @@ $trames = $var->fetchAll();
             <!-- CONTAINER DES LOGS display none-->
             <div id="container-log">
 
-                <table class="table">
+                <table id="log_table" class="table">
                     <thead>
                         <tr>
                             <th class="border border-left">Date</th>
@@ -124,7 +124,7 @@ $trames = $var->fetchAll();
                         <canvas id="chart_status"></canvas>
                     </div>
                     <div class="big-chart">
-                        <canvas id="trames"></canvas>
+                        <canvas id="chart_tramesParProtocol"></canvas>
                     </div>
                     <div class="big-chart">
                         <canvas id="chart_tramesParIpFrom"></canvas>
