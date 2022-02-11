@@ -3,7 +3,7 @@ $(document).ready(function () {
   // ================================== HEADER BG ON SCROLL ==================================
 
   $(window).on("scroll", function () {
-    if ($(window).scrollTop() > 510) {
+    if ($(window).scrollTop() > 400) {
       $(".header-container").addClass("active");
     } else {
       //remove the background property so it comes transparent again (defined in your css)

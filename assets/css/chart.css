@@ -94,6 +94,8 @@ header{
 
 .content-button {
 	width: 80%;
+	font-size: 17px;
+	font-weight: bold;
 	text-align: left;
 }
 
@@ -108,7 +110,7 @@ table {
 	text-align: center;
 	box-shadow: 0 1px 22px -12px #101413;
 	border-collapse: collapse;
-	font-size: 12px;
+	font-size: 11px;
 	/* border-radius: 5px; */
 }
 

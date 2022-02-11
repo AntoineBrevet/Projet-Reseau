@@ -66,10 +66,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* ========================== BODY ========================== */
 body {
-  background-image: url(../img/data-network.jpg);
+  background-image: url(../img/bg-body-bis.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Cabin', sans-serif;
+  min-height: 100vh;
 }
 
 /* ========================== HEADER ========================== */
@@ -127,7 +128,8 @@ body {
   color: #fff;
 }
 
-.title-menu{
+.title-menu {
+  font-size: 20px;
   margin-bottom: 5px;
 }
 
@@ -135,13 +137,57 @@ body {
   color: #fff;
   text-decoration: none;
 }
-.ul{
+
+.li a:hover {
+  color: #fff;
+  /* text-decoration: none; */
+}
+
+.ul {
   list-style-type: none;
   padding: 0 35px 0 0;
 }
-.li{
+
+.li {
   margin-bottom: 3px;
 }
+
+a.fancy, a.fancy:visited {
+  text-decoration: none;
+  background-image:
+    linear-gradient(transparent 2px,
+      rgba(221, 65, 144, 1) 50%,
+      rgba(221, 65, 144, 0) 100%,
+      transparent 4px);
+  background-size: 0% 6px, 100% 6px;
+  background-position: 0 bottom, 0 bottom;
+  transition: background-size 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  padding-bottom: 4px;
+  border-bottom: 6px solid transparent;
+}
+
+/* background: linear-gradient(90deg, rgba(221, 65, 144, 1) 50%, rgba(221, 65, 144, 0) 100%);
+transition: opacity 300ms ease; */
+
+a.fancy:hover {
+  background-size: 100% 6px;
+}
+
+@supports (-ms-ime-align:auto) {
+  a.fancy, a.fancy:visited {
+    background-image:
+      linear-gradient(#2ed392, #2ed392),
+      linear-gradient(#d8dce9, #d8dce9);
+    background-size: 0% 2px, 100% 2px;
+    padding-bottom: 2px;
+  }
+
+  a.fancy:hover {
+    background-size: 100% 2px;
+  }
+}
+
 /* ========================== MAIN ========================== */
 /* main{
   padding-bottom: 40px;
@@ -152,11 +198,11 @@ body {
   align-items: center;
   color: #fff;
   margin: 100px 0;
-  height: 400px;
+  height: 213px;
 }
 
 .body-title {
-  font-size: 70px;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -227,6 +273,7 @@ body {
   text-decoration: none;
   color: #fff;
 }
+
 .container-contact img {
   width: 50%;
 }
@@ -238,15 +285,22 @@ body {
 
 /* ======================================== ABOUT US ======================================== */
 .aboutus {
-  margin: 50px;
+  /* margin: 50px; */
   padding: 50px;
 }
 
+/* .about-title{
+  font-size: 40px;
+} */
 .text {
   color: #fff;
   text-align: center;
   margin-bottom: 50px;
 }
+
+/* .about-para{
+  margin-bottom: 30px;
+} */
 
 .img-slides {
   margin: 0 10px;
@@ -258,11 +312,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 15px 30px 0;
   background-color: #272A5F;
   color: #fff;
   height: 80px;
   width: 100%;
+}
+
+.copy-little {
+  font-size: 18px;
 }
 
 .footer-right {
