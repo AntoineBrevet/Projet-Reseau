@@ -1,16 +1,17 @@
 body {
-  /* background-color: #272A5F; */
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Cabin', sans-serif;
+	/* background-color: #272A5F; */
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Cabin', sans-serif;
 }
+
 /* DASHBOARD ================================================*/
 
 .container-dashboard {
 	display: flex;
 	justify-content: space-between;
 	height: 100%;
-  padding: 100px 40px 40px;
+	padding: 100px 40px 40px;
 	/* margin: 100px 20px 20px 20px; */
 }
 
@@ -59,7 +60,7 @@ body {
 
 #container-chart {
 	width: 90%;
-  padding: 20px 10px;
+	padding: 20px 10px;
 	margin: 45px auto;
 }
 
@@ -76,9 +77,9 @@ body {
 	font-size: 20px;
 	display: flex;
 	justify-content: space-between;
-  align-items: center;
-  border: none;
-  cursor: pointer;
+	align-items: center;
+	border: none;
+	cursor: pointer;
 }
 
 #btn-chart {
@@ -90,7 +91,7 @@ body {
 }
 
 .content-button {
-	width: 70%;
+	width: 80%;
 	text-align: left;
 }
 
@@ -104,7 +105,7 @@ table {
 	height: 100%;
 	text-align: center;
 	box-shadow: 0 1px 22px -12px #101413;
-  border-collapse: collapse;
+	border-collapse: collapse;
 	/* border-radius: 5px; */
 }
 
@@ -115,7 +116,7 @@ th, td {
 th {
 	background-color: #272A5F;
 	text-transform: uppercase;
-  color: #fff;
+	color: #fff;
 }
 
 tr:nth-child(odd) {
@@ -164,3 +165,62 @@ tr:nth-child(odd) {
 	background-color: #fff;
 	box-shadow: 0 1px 22px -12px #607D8B;
 }
+
+.content {
+	margin-top: 50px;
+}
+
+.pagination {
+	margin-top: 1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style-type: none;
+}
+.page-item{
+	cursor: pointer;
+	margin-left: 15px;
+	border: 2px solid #272A5F;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+.page-link{
+	text-decoration: none;
+	color: #000;
+}
+/* 
+.pagenumbers {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.pagenumbers button {
+	width: 50px;
+	height: 50px;
+
+	appearance: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	background-color: #44AAEE;
+
+	margin: 5px;
+	transition: 0.4s;
+
+	color: #FFF;
+	font-size: 18px;
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pagenumbers button:hover {
+	background-color: #44EEAA;
+}
+
+.pagenumbers button.active {
+	background-color: #44EEAA;
+	box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+} */

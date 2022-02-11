@@ -36,9 +36,10 @@
 
 <!-- ===================================== SCRIPT PERSO ===================================== -->
 <script src="assets/js/slide.js" type="text/javascript"></script>
-<script src="assets/js/graph.js" type="text/javascript"></script>
+<!-- <script src="assets/js/graph.js" type="text/javascript"></script> -->
 <script src="assets/js/charts.js"></script>
 <script src="assets/js/main.js" type="text/javascript"></script>
+<!-- <script src="../test/test.js"></script> -->
 
 </body>
 
