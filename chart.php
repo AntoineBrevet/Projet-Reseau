@@ -43,7 +43,6 @@ include('inc/headerCharts.php');
         <div class="body-dashboard">
             <!-- CONTAINER DES LOGS display none-->
             <div id="container-log">
-
                 <table class="table">
                     <thead>
                         <tr>
@@ -95,14 +94,14 @@ include('inc/headerCharts.php');
             <div id="container-chart">
                 <div class="chart-top">
 
-                    <div class="big-chart">
+                <div class="big-chart">
                         <canvas id="chart_tramesParJour"></canvas>
                     </div>
                     <div class="big-chart">
                         <canvas id="chart_lostTTLParProtocol"></canvas>
                     </div>
                     <div class="big-chart">
-                        <canvas id="chart_failParProtocol"></canvas>                        
+                        <canvas id="chart_failParProtocol"></canvas>
                     </div>
                     <div class="big-chart">
                         <canvas id="chart_failsParIpFrom"></canvas>
@@ -117,16 +116,16 @@ include('inc/headerCharts.php');
                 </div>
 
                 <div class="chart-bottom">
-                    <div class="big-chart">
+                    <div class="big-chart rond">
                         <canvas id="chart_status"></canvas>
                     </div>
-                    <div class="big-chart">
+                    <div class="big-chart rond">
                         <canvas id="trames"></canvas>
                     </div>
-                    <div class="big-chart">
+                    <div class="big-chart rond">
                         <canvas id="chart_tramesParIpFrom"></canvas>
                     </div>
-                    <div class="big-chart">
+                    <div class="big-chart rond">
                         <canvas id="chart_tramesParIpDest"></canvas>
                     </div>
                 </div>

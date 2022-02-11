@@ -127,11 +127,21 @@ body {
   color: #fff;
 }
 
+.title-menu{
+  margin-bottom: 5px;
+}
+
 .li a {
   color: #fff;
   text-decoration: none;
 }
-
+.ul{
+  list-style-type: none;
+  padding: 0 35px 0 0;
+}
+.li{
+  margin-bottom: 3px;
+}
 /* ========================== MAIN ========================== */
 /* main{
   padding-bottom: 40px;

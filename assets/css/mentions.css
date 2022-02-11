@@ -1,0 +1,18 @@
+header{
+  height: 70px;
+}
+.title-mentions {
+  padding: 30px;
+  margin-bottom: 40px;
+  background-color: #bbb9b9;
+}
+
+.legale{
+  padding:.1px 70px;
+  margin-bottom: 50px;
+  /* font-size: 20px; */
+}
+.text-mentions{
+  font-size: 15px;
+  margin-bottom: 30px;
+}

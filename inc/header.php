@@ -47,7 +47,7 @@
       <!-- Connecté -->
       <!-- Pas Connecté -->
       <div id="hide" class="menu">
-        <h3>Mon profil</h3>
+        <h3 class="title-menu">Mon profil</h3>
         <ul class="ul">
           <li class="li"><a class="a" href="inscription-connexion.php">Inscription/Connexion</a></li>
           <li class="li"><a class="a" href="chart.php">Mon espace</a></li>

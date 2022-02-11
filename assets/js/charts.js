@@ -278,8 +278,8 @@ $(document).ready(function () {
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
                             'rgb(255, 205, 86)'
-                          ],
-                        data: Object.values(data),                        
+                        ],
+                        data: Object.values(data),
                         hoverOffset: 4
                     }]
                 },
@@ -321,9 +321,9 @@ $(document).ready(function () {
                             'rgb(54, 162, 235)',
                             'rgb(255, 205, 86)',
                             'rgb(201, 84, 15)',
-                            'rgb(0, 45, 179)' 
-                          ],
-                        data: Object.values(data),                        
+                            'rgb(0, 45, 179)'
+                        ],
+                        data: Object.values(data),
                         hoverOffset: 4
                     }]
                 },
@@ -360,13 +360,13 @@ $(document).ready(function () {
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label : 'Disabled frames',
+                        label: 'Disabled frames',
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
-                            'rgb(0, 45, 179)' 
-                          ],
-                        data: Object.values(data),                        
+                            'rgb(0, 45, 179)'
+                        ],
+                        data: Object.values(data),
                     }]
                 },
 
@@ -402,15 +402,15 @@ $(document).ready(function () {
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label : 'Disabled frames',
+                        label: 'Disabled frames',
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
                             'rgb(255, 205, 86)',
                             'rgb(201, 84, 15)',
-                            'rgb(0, 45, 179)' 
-                          ],
-                        data: Object.values(data),                        
+                            'rgb(0, 45, 179)'
+                        ],
+                        data: Object.values(data),
                     }]
                 },
 
@@ -446,9 +446,9 @@ $(document).ready(function () {
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label : 'Disabled frames',
+                        label: 'Disabled frames',
                         backgroundColor: 'rgb(255, 99, 132)',
-                        data: Object.values(data),                        
+                        data: Object.values(data),
                     }]
                 },
 

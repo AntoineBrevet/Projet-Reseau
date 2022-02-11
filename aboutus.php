@@ -10,9 +10,17 @@ include('inc/headerall.php');
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          <li class="glide__slide img-slides"><img src="assets/img/connected.svg" alt=""></li>
-          <li class="glide__slide img-slides"><img src="assets/img/data.svg" alt=""></li>
-          <li class="glide__slide img-slides"><img src="assets/img/server.svg" alt=""></li>
+          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_big_tramesday.png" alt=""></li> -->
+          <li class="glide__slide img-slides"><img src="assets/img/graph_tramesday.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/graph_ttlLost.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/graph_frames_proto.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/graph_frames_ipfrom.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/graph_frames_ipdest.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/graph_framesday.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/graph_statut_global.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/graph_trames_proto.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/graph_ipdest.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/graph_ipfrom.png" alt=""></li>
         </ul>
       </div>
       <div class="glide__arrows" data-glide-el="controls">
