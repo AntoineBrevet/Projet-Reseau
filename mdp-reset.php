@@ -17,10 +17,10 @@ ini_set('display_errors', 1);
             <img src="assets/img/forgot_password.svg" id="img-mdp-reset-container">
         </div>
         <div id="txt-mdp-reset">
-            <h2>Mot de passe oublié</h2>
-            <p>Vous allez recevoir un e-mail pour rénitialiser votre mot de passe.</p>
+            <h2 id="txt-titre-reset">Mot de passe oublié</h2>
+            <p id="txt-para-reset">Vous allez recevoir un e-mail pour rénitialiser votre mot de passe.</p>
             <form action="#" method="post">
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3 input-mdp-reset">
                     <input type="email" name="email" id="email" placeholder="Email" class="form-control">
                     <label for="email" id="email-label">Veuillez entrer votre adresse e-mail</label>
                 </div>

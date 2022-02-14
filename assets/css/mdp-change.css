@@ -1,0 +1,55 @@
+#page-mdp-change{
+    margin-top: 76px;
+    display: flex;
+    padding-top: 150px;
+}
+
+h2,p{
+    color: white;
+}
+
+#img-mdp-change{
+    width: 45%;
+}
+
+#img-mdp-change-container{
+    width: 70%;
+    margin: auto;
+}
+
+#txt-mdp-change{
+    width: 50%;
+}
+
+.input-mdp-change{
+    width: 80%;
+    margin-left: 10%;
+}
+#contrainte1, #contrainte2, #contrainte3, #contrainte4, #contrainte5, #contrainte6{
+    color: grey;
+}
+
+
+#contrainte1img, #contrainte2img, #contrainte3img, #contrainte4img, #contrainte5img, #contrainte6img{
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+#contrainte, #contrainte6{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#change{
+    text-align: center;
+}
+
+#btn-change{
+    text-align: center;
+}
+
+#txt-titre-change, #txt-para-change{
+    text-align: center;
+}

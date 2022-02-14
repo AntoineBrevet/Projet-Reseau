@@ -7,29 +7,39 @@ include('inc/header.php');
 
 
 <main>
-    <form action="" method="post" style="margin-top: 200px;">
-        <div class="form-floating mb-3">
-            <input type="text" name="mdp1" id="mdp1" placeholder="Mot de passe" class="form-control">
-            <label for="mdp">Mot de passe</label>
+    <div id="page-mdp-change">
+        <div id="img-mdp-change">
+            <img src="assets/img/undraw_my_password.svg" id="img-mdp-change-container">
         </div>
-        <div id="contrainte">
-            <span id="contrainte1"><img src="assets/ico/sue-check-grey.svg" id="contrainte1img"> 1 majuscule</span>
-            <span id="contrainte2"><img src="assets/ico/sue-check-grey.svg" id="contrainte2img"> 1 minuscule</span>
-            <span id="contrainte3"><img src="assets/ico/sue-check-grey.svg" id="contrainte3img"> 1 chiffre</span>
-            <span id="contrainte4"><img src="assets/ico/sue-check-grey.svg" id="contrainte4img"> 1 caractère spécial</span>
-            <span id="contrainte5"><img src="assets/ico/sue-check-grey.svg" id="contrainte5img"> 8 caractères minimum</span>
-        </div><br>
-        <div class="form-floating mb-3">
-            <input type="text" name="mdp2" id="mdp2" placeholder="Confirmer mot de passe" class="form-control">
-            <label for="mdp">Confirmer le mot de passe</label>
+        <div id="txt-mdp-change">
+            <h2 id="txt-titre-change">Veuillez entrer votre nouveau mot de passe</h2>
+            <!-- <p id="txt-para-change">Veuillez entrer votre nouveau mot de passe.</p> -->
+            <form action="" method="post" style="margin-top: 50px;">
+                <div class="form-floating mb-3 input-mdp-change" class="input-mdp-change">
+                    <input type="text" name="mdp1" id="mdp1" placeholder="Mot de passe" class="form-control">
+                    <label for="mdp">Mot de passe</label>
+                </div>
+                <div id="contrainte">
+                    <span id="contrainte1"><img src="assets/ico/sue-check-grey.svg" id="contrainte1img"> 1 majuscule</span>
+                    <span id="contrainte2"><img src="assets/ico/sue-check-grey.svg" id="contrainte2img"> 1 minuscule</span>
+                    <span id="contrainte3"><img src="assets/ico/sue-check-grey.svg" id="contrainte3img"> 1 chiffre</span>
+                    <span id="contrainte4"><img src="assets/ico/sue-check-grey.svg" id="contrainte4img"> 1 caractère spécial</span>
+                    <span id="contrainte5"><img src="assets/ico/sue-check-grey.svg" id="contrainte5img"> 8 caractères minimum</span>
+                </div><br>
+                <div class="form-floating mb-3 input-mdp-change">
+                    <input type="text" name="mdp2" id="mdp2" placeholder="Confirmer mot de passe" class="form-control">
+                    <label for="mdp">Confirmer le mot de passe</label>
+                </div>
+                <div>
+                    <span id="contrainte6"><img src="assets/ico/sue-check-grey.svg" id="contrainte6img"> Mot de passe identique</span>
+                </div><br>
+                <div id="btn-change">
+                    <input type="submit" value="Changer de mot de passe" id="change" class="btn btn-primary btn-lg btn-block">
+                </div>
+            </form>
         </div>
-        <div>
-            <span id="contrainte6"><img src="assets/ico/sue-check-grey.svg" id="contrainte6img"> Mot de passe identique</span>
-        </div><br>
-        <div>
-            <input type="submit" value="Changer de mot de passe" id="change" class="btn btn-primary btn-lg btn-block">
-        </div>
-    </form>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="mdp-change.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
