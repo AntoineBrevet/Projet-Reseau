@@ -65,9 +65,9 @@ if (empty($_POST["email"])) {
         $req = $pdo->prepare("UPDATE `res_users` SET `token` = '$token', `token_at` = '$date' WHERE email='$email'");
         $req->execute();
 
-        $link = "localhost/Projet-Reseau/mdp-change.php?token=" . $token;
+        $link = "http://localhost/Projet-Reseau/mdp-change.php?token=" . $token;
 
-        $result = smtpmailer(GMailUSER, 'Support FrameIP', 'FrameIP Assistance', 'Reset mdp', $link);
+        $result = smtpmailer($email, 'Support FrameIP', 'FrameIP Assistance', 'Reset mdp', $link);
         if (true !== $result)
         {
             // erreur -- traiter l'erreur

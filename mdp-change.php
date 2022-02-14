@@ -53,8 +53,8 @@ if (!empty($_POST)) {
         echo ("Tous les champs sont bien remplis!!!");
         $mdp = $_POST['mdp1'];
 
-        // $token = $_GET['token'];
-        $token = "124C6D55CC";
+        $token = $_GET['token'];
+        // $token = "124C6D55CC";
 
         //Crypte le MDP
         $hashed_mdp = password_hash($mdp, PASSWORD_DEFAULT);

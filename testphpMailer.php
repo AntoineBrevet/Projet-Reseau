@@ -9,8 +9,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\OAuth;
 
-define('GMailUSER', 'pp4520500@gmail.com'); 
-define('GMailPWD', 'peterparker1&'); 
+define('GMailUSER', 'frameipassistance@gmail.com'); 
+define('GMailPWD', 'frameIP&76'); 
 
 function smtpMailer($to, $from, $from_name, $subject, $body) {
 	$mail = new PHPMailer();  // Cree un nouvel objet PHPMailer
