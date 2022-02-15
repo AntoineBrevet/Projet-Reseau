@@ -1,12 +1,11 @@
-<!--
-    Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
-    Adresse IP d'arrivée unique => nombre de frames
-
-    Cf. failsParIpDest.php pour l'explication de code
--->
-
 <?php
-include("fonctions.php");
+
+    // Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
+    // Adresse IP d'arrivée unique => nombre de frames
+
+    // Cf. failsParIpDest.php pour l'explication de code
+
+    include("fonctions.php");
 include("inc/pdo.php");
 
 $ip_dest = array();

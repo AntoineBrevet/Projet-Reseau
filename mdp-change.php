@@ -64,12 +64,17 @@ if (!empty($_POST)) {
         echo ("Tous les champs ne sont pas remplis ou respectés!!!");
     } else {
         echo ("Tous les champs sont bien remplis!!!");
+
         $mdp = $_POST['mdp1'];
 
         $token = $_GET['token'];
-        // $token = "124C6D55CC";
 
-        //Crypte le MDP
+        $ver = $pdo->prepare("SELECT token_at FROM res_users WHERE token='$token'");
+        $ver->execute();
+        $datecheck = $ver->fetch();
+        debug($datecheck);
+        if (date("Y-m-d H:i:s")<$datecheck['token_at']){
+            //Crypte le MDP
         $hashed_mdp = password_hash($mdp, PASSWORD_DEFAULT);
 
 
@@ -77,6 +82,12 @@ if (!empty($_POST)) {
         $req = $pdo->prepare("UPDATE `res_users` SET `password` = '$hashed_mdp' WHERE token='$token'");
         $req->execute();
         debug($req);
+        }
+        else{
+            echo("Temps limite dépassé");
+        }
+
+        
     }
 }
 

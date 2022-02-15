@@ -1,11 +1,12 @@
-<!--
-    Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
-    Statut => nombre de frames
 
-    Cf. failParProtocol.php pour l'explication de code
--->
 
 <?php
+
+    // Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
+    // Statut => nombre de frames
+
+    // Cf. failParProtocol.php pour l'explication de code
+
 include("inc/pdo.php");
 
 $query = "SELECT status FROM res_trames";

@@ -1,9 +1,9 @@
-<!--
-    Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
-    Nom de protocole unique => nombre d'échecs
--->
+
 
 <?php
+
+    // Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
+    // Nom de protocole unique => nombre d'échecs
 
 include("inc/pdo.php");
 

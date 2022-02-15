@@ -1,27 +1,24 @@
 <?php
-session_start();
+//session_start();
 include('inc/pdo.php');
 include("fonctions.php");
 
 $title = 'Mon espace';
 
 include('inc/headerCharts.php');
-?>
 
-<?php 
 
-    if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) {
+    // if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) { 
 
     $sql = "SELECT * FROM res_trames ORDER BY date DESC";
     $var = $pdo->prepare($sql);
     $var->execute();
     $trames = $var->fetchAll();
     // include('modal.php'); 
-}
+    //}
+    
+    
 ?>
-
-<?php if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) : ?>
-
     <div class="wrap-dashboard">
 
         <div class="container-dashboard">
@@ -100,29 +97,28 @@ include('inc/headerCharts.php');
 
                 </div>
 
-                <!-- <div class="charts-container">
-                <div class="charts">
-                        <canvas id="myChart"></canvas>
-                    </div>
-                </div> -->
+                <div id="container-chart">
+                    <div class="chart-top">
 
-                <div class="big-chart">
-                        <canvas id="chart_tramesParJour"></canvas>
-                    </div>
-                    <div class="big-chart">
-                        <canvas id="chart_lostTTLParProtocol"></canvas>
-                    </div>
-                    <div class="big-chart">
-                        <canvas id="chart_failParProtocol"></canvas>
-                    </div>
-                    <div class="big-chart">
-                        <canvas id="chart_failsParIpFrom"></canvas>
-                    </div>
-                    <div class="big-chart">
-                        <canvas id="chart_failsParIpDest"></canvas>
-                    </div>
-                    <div class="big-chart">
-                        <canvas id="chart_failsParJour"></canvas>
+                        <div class="big-chart">
+                            <canvas id="chart_tramesParJour"></canvas>
+                        </div>
+                        <div class="big-chart">
+                            <canvas id="chart_lostTTLParProtocol"></canvas>
+                        </div>
+                        <div class="big-chart">
+                            <canvas id="chart_failParProtocol"></canvas>
+                        </div>
+                        <div class="big-chart">
+                            <canvas id="chart_failsParIpFrom"></canvas>
+                        </div>
+                        <div class="big-chart">
+                            <canvas id="chart_failsParIpDest"></canvas>
+                        </div>
+                        <div class="big-chart">
+                            <canvas id="chart_failsParJour"></canvas>
+                        </div>
+
                     </div>
 
                 <div class="chart-bottom">
@@ -145,7 +141,6 @@ include('inc/headerCharts.php');
 
     </div>
 
-<?php endif; ?>
-
 <?php
-include('inc/footerCharts.php'); ?>
+
+include('inc/footerCharts.php'); 
