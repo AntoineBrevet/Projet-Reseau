@@ -4,7 +4,7 @@
     padding-top: 150px;
 }
 
-h2,p{
+#txt-titre-reset, #txt-para-reset{
     color: white;
 }
 
@@ -22,8 +22,7 @@ h2,p{
     text-align: center;
 }
 
-.form-floating{
+.input-mdp-reset{
     width: 70%;
     margin: auto;
 }
-

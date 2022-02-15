@@ -1,46 +1,53 @@
 <?php
+session_start();
 include('inc/pdo.php');
 include("fonctions.php");
 
 $title = 'Mon espace';
 
 include('inc/headerCharts.php');
-
-
-$sql = "SELECT * FROM res_trames ORDER BY date DESC";
-$var = $pdo->prepare($sql);
-$var->execute();
-$trames = $var->fetchAll();
-
-// include('modal.php'); 
 ?>
 
-<div class="wrap-dashboard">
+<?php 
 
-    <div class="container-dashboard">
+    if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) {
 
-        <div id="title-dashboard">
-            <button class="btn-title-dashboard" id="btn-chart"><i class="fas fa-chart-pie"></i>
-                <p class="content-button">Graphiques</p>
-            </button>
+    $sql = "SELECT * FROM res_trames ORDER BY date DESC";
+    $var = $pdo->prepare($sql);
+    $var->execute();
+    $trames = $var->fetchAll();
+    // include('modal.php'); 
+}
+?>
+
+<?php if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) : ?>
+
+    <div class="wrap-dashboard">
+
+        <div class="container-dashboard">
+
+            <div id="title-dashboard">
+                <button class="btn-title-dashboard" id="btn-chart"><i class="fas fa-chart-pie"></i>
+                    <p class="content-button">Graphiques</p>
+                </button>
 
 
-            <button class="btn-title-dashboard" id="btn-log"><i class="fas fa-database"></i>
-                <p class="content-button">Logs</p>
-            </button>
+                <button class="btn-title-dashboard" id="btn-log"><i class="fas fa-database"></i>
+                    <p class="content-button">Logs</p>
+                </button>
 
 
-            <div class="color-status" style="display:none;">
-                <div class="box-color">
-                    <div class="circle-color timeout"></div>
-                    <p>Timeout</p>
-                </div>
-                <div class="box-color">
-                    <div class="circle-color success"></div>
-                    <p>Success</p>
+                <div class="color-status" style="display:none;">
+                    <div class="box-color">
+                        <div class="circle-color timeout"></div>
+                        <p>Timeout</p>
+                    </div>
+                    <div class="box-color">
+                        <div class="circle-color success"></div>
+                        <p>Success</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
         <div class="body-dashboard">
             <!-- CONTAINER DES LOGS display none-->
@@ -83,23 +90,21 @@ $trames = $var->fetchAll();
                             <?php
                                 $trame['ip_from'] = ipConvert($trame['ip_from']);
                                 $trame['ip_dest'] = ipConvert($trame['ip_dest']);
-                            ?>
-                            <td><?php echo $trame['ip_from']; ?></td>
-                            <td><?php echo $trame['ip_dest']; ?></td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+                                ?>
+                                <td><?php echo $trame['ip_from']; ?></td>
+                                <td><?php echo $trame['ip_dest']; ?></td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
 
-            </div>
+                </div>
 
-            <!-- <div class="charts-container">
-                    <div class="charts">
+                <!-- <div class="charts-container">
+                <div class="charts">
                         <canvas id="myChart"></canvas>
                     </div>
                 </div> -->
-            <div id="container-chart">
-                <div class="chart-top">
 
                 <div class="big-chart">
                         <canvas id="chart_tramesParJour"></canvas>
@@ -120,8 +125,6 @@ $trames = $var->fetchAll();
                         <canvas id="chart_failsParJour"></canvas>
                     </div>
 
-                </div>
-
                 <div class="chart-bottom">
                     <div class="big-chart rond">
                         <canvas id="chart_status"></canvas>
@@ -137,11 +140,12 @@ $trames = $var->fetchAll();
                     </div>
                 </div>
             </div>
+
         </div>
 
     </div>
 
-</div>
+<?php endif; ?>
 
 <?php
 include('inc/footerCharts.php'); ?>

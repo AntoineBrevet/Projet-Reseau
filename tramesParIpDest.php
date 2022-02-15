@@ -1,3 +1,10 @@
+<!--
+    Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
+    Adresse IP d'arrivée unique => nombre de frames
+
+    Cf. failsParIpDest.php pour l'explication de code
+-->
+
 <?php
 include("fonctions.php");
 include("inc/pdo.php");
@@ -21,12 +28,14 @@ foreach($ip_dest as $ip_des) {
         $data_final[$ip_des]++;
     }
 }
+
 for($i = 0; $i < count($data_final); $i++) {
     $oldkey = key($data_final);
     $newkey = ipConvert($oldkey);          
     $data_final[$newkey] = $data_final[$oldkey];
     unset($data_final[$oldkey]);
 }
+
 print(json_encode($data_final));
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('inc/pdo.php');
 include('fonctions.php');
 
@@ -19,7 +20,8 @@ if (!empty($_POST)) {
 
         //Décrypte le MDP récupéré
         if (password_verify($mdp,$users['password'])) {
-            echo ("Le MDP est bon!");
+            $_SESSION['connected'] = true;
+            // echo ("Le MDP est bon!");
             header('Location: chart.php');
         } else {
             echo ("Le MDP n'est pas le bon!");
