@@ -1,9 +1,10 @@
-<!--
-    Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
-    Nom de protocole unique => nombre de TTL perdus
--->
+
 
 <?php
+
+    // Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
+    // Nom de protocole unique => nombre de TTL perdus
+
 include("inc/pdo.php");
 include("fonctions.php");
 

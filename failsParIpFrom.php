@@ -1,11 +1,12 @@
-<!-- 
-    Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
-    Adresse IP de départ unique => nombre d'échecs
- 
-    Cf. failsParIpDest.php pour l'explication du code
--->
+
 
 <?php
+
+
+    // Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
+    // Adresse IP de départ unique => nombre d'échecs
+ 
+    // Cf. failsParIpDest.php pour l'explication du code
 
 include("inc/pdo.php");
 include("fonctions.php");

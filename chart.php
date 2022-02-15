@@ -1,24 +1,21 @@
 <?php
-session_start();
+//session_start();
 include('inc/pdo.php');
 include("fonctions.php");
 include('inc/headerCharts.php');
-?>
 
-<?php 
 
-    if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) {
+    // if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) { 
 
     $sql = "SELECT * FROM res_trames ORDER BY date DESC";
     $var = $pdo->prepare($sql);
     $var->execute();
     $trames = $var->fetchAll();
     // include('modal.php'); 
-}
+    //}
+    
+    
 ?>
-
-<?php if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) : ?>
-
     <div class="wrap-dashboard">
 
         <div class="container-dashboard">
@@ -97,13 +94,6 @@ include('inc/headerCharts.php');
 
                 </div>
 
-                <!-- <div class="charts-container">
-                <div class="charts">
-                        <canvas id="myChart"></canvas>
-                    </div>
-                </div> -->
-
-
                 <div id="container-chart">
                     <div class="chart-top">
 
@@ -150,6 +140,8 @@ include('inc/headerCharts.php');
 
     </div>
 
-<?php endif; ?>
+<?php
 
-<?php include('inc/footer.php'); ?>
+include("inc/footer.php");
+
+?>
