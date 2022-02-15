@@ -2,6 +2,8 @@
 session_start();
 include('inc/pdo.php');
 
+$title = 'Nous contacter';
+
 include('inc/header.php');
 // include('modal.php'); 
 ?>

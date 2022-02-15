@@ -4,9 +4,11 @@ body {
 	background-size: cover;
 	font-family: 'Cabin', sans-serif;
 }
-header{
+
+header {
 	height: 100px;
 }
+
 /* DASHBOARD ================================================*/
 
 .container-dashboard {
@@ -94,13 +96,39 @@ header{
 
 .content-button {
 	width: 80%;
-	font-size: 17px;
+	font-size: 20px;
 	font-weight: bold;
 	text-align: left;
 }
 
 
 /* LOGS ================================================================ */
+
+#log_table_filter {
+	margin-bottom: 10px;
+}
+
+.Table_Div {
+	overflow-x: auto;
+}
+
+/* 
+.User_Table {
+	width: 100%;
+
+	border-collapse: collapse;
+}
+
+.User_Table th {
+	text-align: left;
+	color: white;
+	border-right: 1px solid #ccc;
+	background-color: #00920c;
+}
+
+.User_Table tbody td {
+	border: 1px solid #f1f1f1;
+} */
 
 
 table {
@@ -110,7 +138,8 @@ table {
 	text-align: center;
 	box-shadow: 0 1px 22px -12px #101413;
 	border-collapse: collapse;
-	font-size: 11px;
+	font-size: 15px;
+	/* font-size: 15px; grand écran */
 	/* border-radius: 5px; */
 }
 
@@ -176,9 +205,11 @@ tr:nth-child(odd) {
 	/* background-color: #fff; */
 	/* box-shadow: 0 1px 22px -12px #607D8B; */
 }
-.rond{
+
+.rond {
 	width: 40%;
 }
+
 .content {
 	margin-top: 50px;
 }
@@ -190,16 +221,75 @@ tr:nth-child(odd) {
 	justify-content: center;
 	list-style-type: none;
 }
-.page-item{
+
+.page-item {
 	cursor: pointer;
 	margin-left: 15px;
 	border: 2px solid #272A5F;
 	padding: 10px 20px;
 	border-radius: 10px;
 }
-.page-link{
+
+.page-link {
 	text-decoration: none;
 	color: #000;
 }
 
 
+@media only screen and (max-width: 1280px) {
+	table{
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 420px) {
+	/* .page-id-3 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	} */
+
+	.container-dashboard {
+		display: flex;
+		flex-direction: column;
+		padding: 0 20px 40px;
+	}
+
+	#btn-chart {
+		margin-top: 0;
+		border-radius: 5px 5px 0 0;
+	}
+
+	#btn-log {
+		border-radius: 0 0 5px 5px;
+	}
+
+	#title-dashboard {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.body-dashboard {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.table {
+		font-size: 13px;
+	}
+
+	.big-chart {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+
+	.rond {
+		width: 100%;
+	}
+
+	
+	/* .img-header{
+		width: 80%;
+	} */
+}

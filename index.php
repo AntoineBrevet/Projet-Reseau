@@ -1,6 +1,8 @@
 <?php
+$title = 'Accueil';
 
 include('inc/header.php');
+include('inscription-connexion.php');
 
 ?>
 
@@ -23,11 +25,13 @@ include('inc/header.php');
     </div>
 
   </div>
-</div>
+  </div>
+  <div class="iframe-maps">
+    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=30%20Pl.%20Henri%20Gadeau%20de%20Kerville,%2076100%20Rouen+(My%20Business%20Name)&amp;t=p&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
 </main>
 <!-- <div class="bottom-body" id="map"> -->
-  <div id="map"></div>
-
+<!-- <div id="map"></div> -->
 
 
 <?php

@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <!-- =================================== ICO =================================== -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
@@ -34,7 +35,7 @@
   <link rel="stylesheet" href="assets/css/bg.css">
   <link rel="stylesheet" href="assets/css/chart.css">
 
-  <title>FrameIP</title>
+  <title>FrameIP | <?php echo $title; ?></title>
 </head>
 
 <body>
@@ -63,7 +64,7 @@
       <div id="hide" class="menu">
         <h3 class="title-menu">Mon profil</h3>
         <ul class="ul">
-          <li class="li"><a class="a" href="inscription-connexion.php">Inscription/Connexion</a></li>
+          <li class="li"><a class="a" data-toggle="modal" data-target="#myModal" href="">Inscription/Connexion</a></li>
           <li class="li"><a class="a" href="chart.php">Mon espace</a></li>
           <li class="li"><a class="a" href="aboutus.php">Qui sommes nous ?</a></li>
           <li class="li"><a class="a" href="contact.php">Contact</a></li>

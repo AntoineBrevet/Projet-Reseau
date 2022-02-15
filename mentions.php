@@ -1,6 +1,8 @@
 <?php
 require('inc/pdo.php');
 
+$title = 'Mentions Légales';
+
 include('inc/headerall.php'); ?>
 
 <div class="title-mentions">

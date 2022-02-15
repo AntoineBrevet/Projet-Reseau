@@ -1,6 +1,9 @@
 <?php
 include('inc/pdo.php');
 include("fonctions.php");
+
+$title = 'Mon espace';
+
 include('inc/headerCharts.php');
 
 
@@ -41,9 +44,9 @@ $trames = $var->fetchAll();
 
         <div class="body-dashboard">
             <!-- CONTAINER DES LOGS display none-->
-            <div id="container-log">
+            <div id="container-log" class="Table_Div">
 
-                <table id="log_table" class="table">
+                <table id="log_table" class="table User-Table flexy">
                     <thead>
                         <tr>
                             <th class="border border-left">Date</th>
@@ -141,4 +144,4 @@ $trames = $var->fetchAll();
 </div>
 
 <?php
-include('inc/footer.php'); ?>
+include('inc/footerCharts.php'); ?>

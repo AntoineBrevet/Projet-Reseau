@@ -20,18 +20,14 @@
 
 <!-- ============================================== SCRIPT ============================================== -->
 
-<!-- ===================================== MAP ===================================== -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDcePR_noPnxzRpBanDWMAIhCULpmms7Q&callback=initMap&v=weekly&channel=2" async></script> -->
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
 <!-- ===================================== JQUERY ===================================== -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- ===================================== SLIDER / CAROUSEL ===================================== -->
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
 <!-- ===================================== SCRIPT PERSO ===================================== -->
-<script src="assets/js/preload.js"></script>
+<script src="assets/js/slide.js" type="text/javascript"></script>
 
 <script src="assets/js/main.js" type="text/javascript"></script>
 

@@ -1,4 +1,6 @@
 <?php
+$title = 'Qui sommes nous ?';
+
 include('inc/headerall.php');
 ?>
 <div class="aboutus">
@@ -33,5 +35,5 @@ include('inc/headerall.php');
 
 <?php
 
-include('inc/footer.php');
+include('inc/footerSlider.php');
 ?>
