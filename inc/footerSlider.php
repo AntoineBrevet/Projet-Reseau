@@ -27,6 +27,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
 <!-- ===================================== SCRIPT PERSO ===================================== -->
+<script src="assets/js/preload.js"></script>
+
 <script src="assets/js/slide.js" type="text/javascript"></script>
 
 <script src="assets/js/main.js" type="text/javascript"></script>

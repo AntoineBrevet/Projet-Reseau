@@ -18,6 +18,7 @@
 
 .modal-title {
     cursor: pointer;
+    padding: 10px 20px;
 }
 
 #onglet-css {
@@ -41,6 +42,12 @@
     margin: 15px 0;
 }
 
+#btnins {
+	background-color: #D3D3D3;
+}
+#btnins, #btnco {
+    border-radius: 5px;
+}
 
 /* #femme, #homme {
     margin-top: 5px;

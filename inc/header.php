@@ -1,3 +1,8 @@
+<?php
+// if (isset($_SESSION['prenom'])) {
+//   $prenom = ($_SESSION['prenom']);
+// }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,12 +66,24 @@
           <i class="far fa-user-circle" id="test"></i>
         </div>
         <!-- Connecté -->
+        <!-- <div id="hide" class="menu">
+          <h3>Mon profil</h3>
+          <ul class="ul">
+            <li class="li"><a class="a" href="testChart.php">Mon espace</a></li>
+            <li class="li"><a class="a" href="aboutus.php">Qui sommes nous ?</a></li>
+            <li class="li"><a class="a" href="contact.php">Contact</a></li>
+            <li class="li"><a class="a" href="deconnexion.php">Déconnecxion</a></li>
+          </ul>
+        </div> -->
         <!-- Pas Connecté -->
         <div id="hide" class="menu">
           <h3 class="title-menu">Mon profil</h3>
           <ul class="ul">
             <li class="li"><a class="a fancy" data-toggle="modal" data-target="#myModal" href="">Inscription/Connexion</a></li>
-            <li class="li"><a class="a fancy" href="chart.php">Mon espace</a></li>
+            <?php if (isset($_SESSION['username'])) {
+              echo "<li><a class=' a fancy linkheader topleft' href='chart.php'>Mon espace</a></li>";
+              echo '<li class="li"><a class="a fancy" href="deconnexion.php">Déconnexion</a></li>';
+            }  ?>
             <li class="li"><a class="a fancy" href="aboutus.php">Qui sommes nous ?</a></li>
             <li class="li"><a class="a fancy" href="contact.php">Contact</a></li>
           </ul>

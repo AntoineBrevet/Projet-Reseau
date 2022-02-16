@@ -63,6 +63,11 @@ p, h1, h2, h3, h4, h5, h6 {
 /* ========================== FONT ========================== */
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+@font-face {
+  font-family: shaggy;
+  src: url(../font/Muli-1GDlj.ttf);
+  /* font-weight: bold; */
+}
 
 /* ========================== BODY ========================== */
 body {
@@ -267,42 +272,98 @@ a.fancy:hover {
   height: 800px;
 }
 
-
+.container {
+  margin-top: 40px;
+}
 
 /* CONTACT =========================================================== */
 
-.wrap-contact {
+/* .wrap-contact {
   max-width: 1600px;
   width: 100%;
   margin: 16% auto;
   font-size: 1em;
-}
+} */
 
 .container-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #fff !important;
+  font-family: shaggy;
+}
+
+.box {
+  line-height: 1.5;
+}
+
+.title-contact {
+  font-weight: 900;
+  font-size: 3.25em;
+  margin-bottom: 30px;
+  /* text-shadow: 2px 3px 0px #898999; */
+  line-height: 1.2;
+  color: #fff !important;
+}
+
+.text-box {
+  width: 100%;
+  margin-bottom: 53.5px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.top-text {
+  margin-bottom: 40px;
+}
+
+.linktext {
+  margin-bottom: 30px;
+}
+
+/* .container-contact {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 5%;
-}
+} */
 
 .container-contact a {
   text-decoration: none;
   color: #fff;
 }
 
+/* 
 .container-contact img {
   width: 50%;
-}
+} */
 
-.color {
+/* .color {
   color: #fff;
-}
+} */
 
 
 /* ======================================== ABOUT US ======================================== */
-.aboutus {
-  /* margin: 50px; */
+/* .aboutus {
+  margin: 50px;
   padding: 50px;
+} */
+
+.about-title {
+  /* padding: 30px; */
+  margin-bottom: 10px;
+  color: #fff !important;
+  /* background-color: #bbb9b9; */
 }
 
 /* .about-title{
@@ -311,12 +372,14 @@ a.fancy:hover {
 .text {
   color: #fff;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
-/* .about-para{
-  margin-bottom: 30px;
-} */
+.about-para {
+  text-align: justify;
+  padding: 0 20px;
+  margin-bottom: 50px auto;
+}
 
 .img-slides {
   margin: 0 10px;
@@ -331,7 +394,7 @@ a.fancy:hover {
   padding: 15px 30px 0;
   background-color: #272A5F;
   color: #fff;
-  /* height: 80px; */
+  height: 80px;
   width: 100%;
 }
 
@@ -552,6 +615,10 @@ a.fancy:hover {
   } */
   a.fancy, a.fancy:visited {
     background-image: none;
+  }
+
+  .footer-container {
+    height: 100px;
   }
 }
 

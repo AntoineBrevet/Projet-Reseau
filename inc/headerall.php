@@ -60,9 +60,13 @@
         <h3 class="title-menu">Mon profil</h3>
         <ul class="ul">
           <li class="li"><a class="a" data-toggle="modal" data-target="#myModal" href="">Inscription/Connexion</a></li>
-          <li class="li"><a class="a" href="chart.php">Mon espace</a></li>
+          <!-- <li class="li"><a class="a" href="chart.php">Mon espace</a></li> -->
+          <?php if (isset($_SESSION['username'])) {
+            echo "<li><a class='a linkheader topleft' href='chart.php'>Mon espace</a></li>";
+          }  ?>
           <li class="li"><a class="a" href="aboutus.php">Qui sommes nous ?</a></li>
           <li class="li"><a class="a" href="contact.php">Contact</a></li>
+          <li class="li"><a class="a fancy" href="deconnexion.php">Déconnexion</a></li>
         </ul>
       </div>
     </div>

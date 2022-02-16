@@ -133,18 +133,38 @@ $(document).on('click', '#connexion', function (event) {
     }
 });
 
-$("#connexion-body").hide();
+// $("#connexion-body").hide();
 
-//Affiche l'inscription et fait disparaitre la connexion
+// //Affiche l'inscription et fait disparaitre la connexion
 
-$(document).on('click', '#bouttoninscritpion', function () {
-    $("#connexion-body").hide();
-    $("#inscription-body").show();
-});
+// $(document).on('click', '#btnins', function () {
+//     $("#connexion-body").hide();
+//     $("#inscription-body").show();
+// });
 
 //Affiche la connexion et fait disparaitre l'inscription
 
-$(document).on('click', '#bouttonconnexion', function () {
-    $("#inscription-body").hide();
-    $("#connexion-body").show();
+// $(document).on('click', '#btnco', function () {
+//     $("#inscription-body").hide();
+//     $("#connexion-body").show();
+// });
+
+$(document).ready(function () {
+    $('#btnco').on('click', function (e) {
+        // console.log("hello");
+        e.preventDefault()
+
+        $('#btnco').css('background-color', '#D3D3D3')
+        $('#btnins').css('background-color', '#fff')
+        $('#connexion-body').css('display', 'block')
+        $('#inscription-body').css('display', 'none')
+    })
+    $('#btnins').on('click', function (e) {
+        e.preventDefault()
+
+        $('#btnco').css('background-color', '#fff')
+        $('#btnins').css('background-color', '#D3D3D3')
+        $('#inscription-body').css('display', 'block')
+        $('#connexion-body').css('display', 'none')
+    })
 });
