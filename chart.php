@@ -1,21 +1,21 @@
 <?php
-//session_start();
+session_start();
 include('inc/pdo.php');
 include("fonctions.php");
-
+include('inc/headerCharts.php');
 $title = 'Mon espace';
 
 include('inc/headerCharts.php');
 
 
-    // if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) { 
+     if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) : 
 
     $sql = "SELECT * FROM res_trames ORDER BY date DESC";
     $var = $pdo->prepare($sql);
     $var->execute();
     $trames = $var->fetchAll();
     // include('modal.php'); 
-    //}
+    
     
     
 ?>
@@ -141,6 +141,7 @@ include('inc/headerCharts.php');
 
     </div>
 
-<?php
-
-include('inc/footerCharts.php'); 
+<?php 
+    include('inc/footerCharts.php'); 
+                        endif;
+?> 
