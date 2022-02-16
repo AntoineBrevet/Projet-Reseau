@@ -1,3 +1,10 @@
+<?php
+// session_start();
+include('inc/pdo.php');
+if (isset($_SESSION['connected']['prenom'])) {
+  $prenom = ($_SESSION['connected']['prenom']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,7 +58,7 @@
         <i class="far fa-user-circle" id="test"></i>
       </div>
       <!-- Connecté -->
-      <?php if (isset($_SESSION['username'])) { ?>
+      <?php if (isset($_SESSION['connected'])) { ?>
         <div id="hide" class="menu">
           <h3>Mon profil</h3>
           <ul class="ul">
@@ -62,19 +69,20 @@
           </ul>
         </div>
       <?php
-      }  ?>
-      <!-- Pas Connecté -->
-      <div id="hide" class="menu">
-        <h3 class="title-menu">Mon profil</h3>
-        <ul class="ul">
-          <li class="li"><a class="a" data-toggle="modal" data-target="#myModal" href="">Inscription/Connexion</a></li>
-          <!-- <li class="li"><a class="a" href="chart.php">Mon espace</a></li> -->
-          <!-- echo "<li><a class='a linkheader topleft' href='chart.php'>Mon espace</a></li>"; -->
-          <li class="li"><a class="a fancy" href="aboutus.php">Qui sommes nous ?</a></li>
-          <li class="li"><a class="a fancy" href="contact.php">Contact</a></li>
-          <li class="li"><a class="a fancy" href="deconnexion.php">Déconnexion</a></li>
-        </ul>
-      </div>
+      } else { ?>
+        <!-- Pas Connecté -->
+        <div id="hide" class="menu">
+          <h3 class="title-menu">Mon profil</h3>
+          <ul class="ul">
+            <li class="li"><a class="a" data-toggle="modal" data-target="#myModal" href="">Inscription/Connexion</a></li>
+            <!-- <li class="li"><a class="a" href="chart.php">Mon espace</a></li> -->
+            <!-- echo "<li><a class='a linkheader topleft' href='chart.php'>Mon espace</a></li>"; -->
+            <li class="li"><a class="a fancy" href="aboutus.php">Qui sommes nous ?</a></li>
+            <li class="li"><a class="a fancy" href="contact.php">Contact</a></li>
+            <li class="li"><a class="a fancy" href="deconnexion.php">Déconnexion</a></li>
+          </ul>
+        </div>
+      <?php } ?>
     </div>
     </div>
   </header>

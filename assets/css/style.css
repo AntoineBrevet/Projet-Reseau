@@ -315,20 +315,23 @@ a.fancy:hover {
   color: #fff !important;
 }
 
-.text-box {
+.top-text {
   width: 100%;
+  margin-bottom: 40px;
+}
+
+.text-box {
   margin-bottom: 53.5px;
   display: flex;
   flex-direction: column;
   font-size: 20px;
 }
-
-.top-text {
-  margin-bottom: 40px;
+.bottom-text{
+  width: 30%;
 }
 
 .linktext {
-  margin-bottom: 30px;
+  margin-bottom: 37px;
 }
 
 /* .container-contact {
@@ -467,7 +470,7 @@ a.fancy:hover {
   }
 
   .fa-user-circle {
-    margin-bottom: 15px;
+    margin-bottom: 63px;
     font-size: 45px;
   }
 
@@ -619,6 +622,18 @@ a.fancy:hover {
 
   .footer-container {
     height: 100px;
+    padding-top: 111px;
+  }
+
+  .box{
+    padding: 0 20px;
+  }
+  .text-box{
+    width: 100%;
+  }
+  .container{
+    padding: 0 40px;
+    margin-bottom: 31px;
   }
 }
 

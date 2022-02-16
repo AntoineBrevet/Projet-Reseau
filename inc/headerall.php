@@ -1,3 +1,10 @@
+<?php
+// session_start();
+include('inc/pdo.php');
+if (isset($_SESSION['connected']['prenom'])) {
+  $prenom = ($_SESSION['connected']['prenom']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

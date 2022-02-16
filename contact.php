@@ -44,8 +44,7 @@ include('inc/header.php');
             If you have any questions, suggestions or other requests feel free to contact us! We are always happy to hear from you!
         </div>
         <div class="text-box bottom-text">
-        <!-- <span class="contact">Email: <a class="linkfooter" href="">myvaccination@gmail.com</a></span> -->
-            <a class="linktext" target="_blank" href="mailto:frameip@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> E-Mail: frameip@frameip.com</a>
+            <a class="linktext" target="_blank" href="mailto:frameip@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> E-Mail: frameip@gmail.com</a>
             <a class="linktext" target="_blank" href="https://twitter.com" title="color space twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter: https://twitter.com</a><br>
         </div>
 

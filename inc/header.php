@@ -1,7 +1,9 @@
 <?php
-// if (isset($_SESSION['prenom'])) {
-//   $prenom = ($_SESSION['prenom']);
-// }
+// session_start();
+include('inc/pdo.php');
+if (isset($_SESSION['connected']['prenom'])) {
+  $prenom = ($_SESSION['connected']['prenom']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +63,11 @@
           <a href="index.php">
             <img class="img-header" src="assets/img/logo.png" alt="">
           </a>
+          <?php
+          // if ($_SESSION['connected']) {
+          //   echo $prenom;
+          // }
+          ?>
         </div>
         <div class="header-right">
           <i class="far fa-user-circle" id="test"></i>

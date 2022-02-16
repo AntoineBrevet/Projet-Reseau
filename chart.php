@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 include('inc/pdo.php');
 include("fonctions.php");
 
