@@ -2,9 +2,8 @@
 session_start();
 include('inc/pdo.php');
 include("fonctions.php");
-include('inc/headerCharts.php');
-$title = 'Mon espace';
 
+$title = 'Mon espace';
 include('inc/headerCharts.php');
 
 

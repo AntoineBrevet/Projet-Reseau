@@ -65,7 +65,7 @@
             <li class="li"><a class="a fancy" href="chart.php">Mon espace</a></li>
             <li class="li"><a class="a fancy" href="aboutus.php">Qui sommes nous ?</a></li>
             <li class="li"><a class="a fancy" href="contact.php">Contact</a></li>
-            <li class="li"><a class="a fancy" href="deconnexion.php">Déconnecxion</a></li>
+            <li class="li"><a class="a fancy" href="deconnexion.php">Déconnexion</a></li>
           </ul>
         </div>
 
