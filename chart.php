@@ -6,8 +6,8 @@ include("fonctions.php");
 $title = 'Mon espace';
 include('inc/headerCharts.php');
 
+if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) : 
 
-     if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) : 
 
     $sql = "SELECT * FROM res_trames ORDER BY date DESC";
     $var = $pdo->prepare($sql);
@@ -141,6 +141,8 @@ include('inc/headerCharts.php');
     </div>
 
 <?php 
-    include('inc/footerCharts.php'); 
-                        endif;
+                    else :
+                        header('Location:index.php');
+                    endif;
+                        include('inc/footerCharts.php'); 
 ?> 
