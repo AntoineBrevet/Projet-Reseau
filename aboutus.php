@@ -1,6 +1,7 @@
 <?php
+session_start();
 $title = 'Qui sommes nous ?';
-
+include('inscription-connexion.php');
 include('inc/header.php');
 ?>
 <div class="aboutus">
