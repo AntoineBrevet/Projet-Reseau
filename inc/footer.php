@@ -32,12 +32,12 @@
 
 
 <!-- ===================================== SLIDER / CAROUSEL ===================================== -->
-<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script> -->
 
 <!-- ===================================== SCRIPT PERSO ===================================== -->
 <script src="assets/js/inscription.js"></script>
 <script src="assets/js/preload.js"></script>
-<script src="assets/js/slide.js"></script>
+<!-- <script src="assets/js/slide.js"></script> -->
 
 
 <script src="assets/js/main.js" type="text/javascript"></script>

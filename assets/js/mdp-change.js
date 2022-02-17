@@ -39,7 +39,7 @@ $(document).on('input', '#mdp1', function () {
         $("#contrainte1img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte1").css("color", "grey");
+        $("#contrainte1").css("color", "white");
         $("#contrainte1img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
@@ -52,7 +52,7 @@ $(document).on('input', '#mdp1', function () {
         $("#contrainte2img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte2").css("color", "grey");
+        $("#contrainte2").css("color", "white");
         $("#contrainte2img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
@@ -65,7 +65,7 @@ $(document).on('input', '#mdp1', function () {
         $("#contrainte3img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte3").css("color", "grey");
+        $("#contrainte3").css("color", "white");
         $("#contrainte3img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
@@ -78,7 +78,7 @@ $(document).on('input', '#mdp1', function () {
         $("#contrainte4img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte4").css("color", "grey");
+        $("#contrainte4").css("color", "white");
         $("#contrainte4img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
@@ -91,7 +91,7 @@ $(document).on('input', '#mdp1', function () {
         $("#contrainte5img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte5").css("color", "grey");
+        $("#contrainte5").css("color", "white");
         $("#contrainte5img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });
@@ -104,7 +104,7 @@ $(document).on('input', '#mdp1,#mdp2', function () {
         $("#contrainte6img").attr('src','assets/ico/sue-check-green.svg')
     }
     else {
-        $("#contrainte6").css("color", "grey");
+        $("#contrainte6").css("color", "white");
         $("#contrainte6img").attr('src','assets/ico/sue-check-grey.svg')
     }
 });

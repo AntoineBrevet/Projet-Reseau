@@ -107,6 +107,7 @@ include('inc/headerModal.php');
                     </div>
                 </form>
             </div>
+            
             <div class="modal-body" id="connexion-body">
                 <form action="connexion.php" method="post">
                     <div class="form-floating mb-3">

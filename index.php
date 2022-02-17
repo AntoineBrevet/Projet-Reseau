@@ -1,10 +1,16 @@
 <?php
 session_start();
+include('inc/pdo.php');
 
 $title = 'Accueil';
 
 include('inc/header.php');
 include('inscription-connexion.php');
+
+
+// if (isset($_SESSION['prenom'])) {
+//   $prenom = ($_SESSION['prenom']);
+// }
 
 ?>
 
@@ -20,38 +26,12 @@ include('inscription-connexion.php');
         par l’optimisation et la sécurisation des échanges.
       </p>
 
-      <div class="container">
-        <div class="glide">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-              <li class="glide__slide img-slides"><img class="img-middle img-middle-left" src="assets/img/connected.svg" alt=""></li>
-              <li class="glide__slide img-slides"><img class="img-middle img-middle-center" src="assets/img/data.svg" alt=""></li>
-              <li class="glide__slide img-slides"><img class="img-middle img-middle-right" src="assets/img/server.svg" alt=""></li>
-              <li class="glide__slide img-slides"><img src="assets/img/data_processing.svg" alt=""></li>
-              <li class="glide__slide img-slides"><img src="assets/img/data_trends.svg" alt=""></li>
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/test_img_slide.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_big_tramesday.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_tramesday.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_ttlLost.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_frames_proto.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_frames_ipfrom.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_frames_ipdest.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_framesday.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_statut_global.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/wm_enlarge_graph_trames_proto.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_ipdest.png" alt=""></li> -->
-              <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_ipfrom.png" alt=""></li> -->
-            </ul>
-          </div>
-          <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-          </div>
-        </div>
+
+      <div class="img-middle-body">
+        <img class="img-middle img-middle-left" src="assets/img/connected.svg" alt="">
+        <img class="img-middle img-middle-center" src="assets/img/data.svg" alt="">
+        <img class="img-middle img-middle-right" src="assets/img/server.svg" alt="">
       </div>
-      <!-- <div class="img-middle-body">
-        
-      </div> -->
     </div>
 
   </div>

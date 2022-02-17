@@ -1,7 +1,10 @@
 <?php
-// if (isset($_SESSION['prenom'])) {
-//   $prenom = ($_SESSION['prenom']);
+
+// $connected = false;
+// if (!empty($_SESSION['connected'])) {
+//   $connected = true;
 // }
+// var_dump($_SESSION['connected']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +43,7 @@
   <link rel="stylesheet" href="assets/css/mdp-reset.css">
   <link rel="stylesheet" href="assets/css/normalize-preloader.css">
   <link rel="stylesheet" href="assets/css/preloader.css">
+  <link rel="stylesheet" href="assets/css/mdp-change.css">
   <link rel="stylesheet" href="assets/css/chart.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -62,33 +66,40 @@
             <img class="img-header" src="assets/img/logo.png" alt="">
           </a>
         </div>
+        <?php
+        if (isset($_SESSION['connected'])) { ?>
+          <div class="header-center">
+            <p class="hello">Bonjour <?php echo ucfirst($_SESSION['name']) ?></p>
+          </div>
+        <?php } ?>
         <div class="header-right">
           <i class="far fa-user-circle" id="test"></i>
         </div>
         <!-- Connecté -->
-        <!-- <div id="hide" class="menu">
-          <h3>Mon profil</h3>
-          <ul class="ul">
-            <li class="li"><a class="a" href="testChart.php">Mon espace</a></li>
-            <li class="li"><a class="a" href="aboutus.php">Qui sommes nous ?</a></li>
-            <li class="li"><a class="a" href="contact.php">Contact</a></li>
-            <li class="li"><a class="a" href="deconnexion.php">Déconnecxion</a></li>
-          </ul>
-        </div> -->
-        <!-- Pas Connecté -->
-        <div id="hide" class="menu">
-          <h3 class="title-menu">Mon profil</h3>
-          <ul class="ul">
-            <li class="li"><a class="a fancy" data-toggle="modal" data-target="#myModal" href="">Inscription/Connexion</a></li>
-            <?php if (isset($_SESSION['username'])) {
-              echo "<li><a class=' a fancy linkheader topleft' href='chart.php'>Mon espace</a></li>";
-              echo '<li class="li"><a class="a fancy" href="deconnexion.php">Déconnexion</a></li>';
-            }  ?>
-            <li class="li"><a class="a fancy" href="aboutus.php">Qui sommes nous ?</a></li>
-            <li class="li"><a class="a fancy" href="contact.php">Contact</a></li>
-          </ul>
-        </div>
+        <?php
+        if (isset($_SESSION['connected'])) { ?>
+          <div id="hide" class="menu">
+            <h3 class="title-menu">Mon profil</h3>
+            <ul class="ul">
+              <li class="li"><a class="a fancy" href="chart.php">Mon espace</a></li>
+              <li class="li"><a class="a fancy" href="aboutus.php">Qui sommes nous ?</a></li>
+              <li class="li"><a class="a fancy" href="contact.php">Contact</a></li>
+              <li class="li"><a class="a fancy" href="deconnexion.php">Déconnecxion</a></li>
+            </ul>
+          </div>
+
+        <?php } else { ?>
+          <!-- Pas Connecté -->
+          <div id="hide" class="menu">
+            <h3 class="title-menu">Bienvenue</h3>
+            <ul class="ul">
+              <li class="li"><a class="a fancy" data-toggle="modal" data-target="#myModal" href="">Inscription/Connexion</a></li>
+              <li class="li"><a class="a fancy" href="aboutus.php">Qui sommes nous ?</a></li>
+              <li class="li"><a class="a fancy" href="contact.php">Contact</a></li>
+            </ul>
+          </div>
       </div>
+    <?php } ?>
   </div>
   <!-- </div> -->
   </header>
