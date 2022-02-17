@@ -105,9 +105,24 @@ body {
 .header-container.active {
   background: #272A5F;
 }
-
+.header-left{
+  width: 30%;
+}
 .img-header {
-  width: 60%;
+  width: 100%;
+}
+
+.header-center{
+  margin-right: 200px;
+  margin-top: 10px;
+}
+.hello {
+  color: #fff!important;
+  /* padding: 10px 90px; */
+  /* margin-right: 100px; */
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .fa-user-circle {
@@ -309,7 +324,7 @@ a.fancy:hover {
 .title-contact {
   font-weight: 900;
   font-size: 3.25em;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   /* text-shadow: 2px 3px 0px #898999; */
   line-height: 1.2;
   color: #fff !important;
@@ -321,12 +336,13 @@ a.fancy:hover {
 }
 
 .text-box {
-  margin-bottom: 53.5px;
+  margin-bottom: 38.5px;
   display: flex;
   flex-direction: column;
   font-size: 20px;
 }
-.bottom-text{
+
+.bottom-text {
   width: 30%;
 }
 
@@ -364,7 +380,7 @@ a.fancy:hover {
 
 .about-title {
   /* padding: 30px; */
-  margin-bottom: 10px;
+  margin: 82px 0 10px;
   color: #fff !important;
   /* background-color: #bbb9b9; */
 }
@@ -470,13 +486,17 @@ a.fancy:hover {
   }
 
   .fa-user-circle {
-    margin-bottom: 63px;
+    margin-bottom: 13px;
     font-size: 45px;
   }
 
   .menu {
     right: 45px;
     top: 50px;
+  }
+
+  header {
+    height: 13px;
   }
 }
 
@@ -625,13 +645,15 @@ a.fancy:hover {
     padding-top: 111px;
   }
 
-  .box{
+  .box {
     padding: 0 20px;
   }
-  .text-box{
+
+  .text-box {
     width: 100%;
   }
-  .container{
+
+  .container {
     padding: 0 40px;
     margin-bottom: 31px;
   }

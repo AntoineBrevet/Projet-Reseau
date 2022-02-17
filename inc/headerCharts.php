@@ -1,10 +1,3 @@
-<?php
-// session_start();
-include('inc/pdo.php');
-if (isset($_SESSION['connected']['prenom'])) {
-  $prenom = ($_SESSION['connected']['prenom']);
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,35 +47,40 @@ if (isset($_SESSION['connected']['prenom'])) {
           <img class="img-header" src="assets/img/logo.png" alt="">
         </a>
       </div>
+      <?php
+        if (isset($_SESSION['connected'])) { ?>
+          <div class="header-center">
+            <p class="hello">Bonjour <?php echo ucfirst($_SESSION['name']) ?></p>
+          </div>
+        <?php } ?>
       <div class="header-right">
         <i class="far fa-user-circle" id="test"></i>
       </div>
       <!-- Connecté -->
-      <?php if (isset($_SESSION['connected'])) { ?>
+      <?php
+      if (isset($_SESSION['connected'])) { ?>
         <div id="hide" class="menu">
           <h3>Mon profil</h3>
           <ul class="ul">
             <li class="li"><a class="a fancy" href="chart.php">Mon espace</a></li>
             <li class="li"><a class="a fancy" href="aboutus.php">Qui sommes nous ?</a></li>
-            <li class="li"><a class="a fancy" href="deconnexion.php">Contact</a></li>
+            <li class="li"><a class="a fancy" href="contact.php">Contact</a></li>
             <li class="li"><a class="a fancy" href="deconnexion.php">Déconnecxion</a></li>
           </ul>
         </div>
-      <?php
-      } else { ?>
+
+      <?php } else { ?>
         <!-- Pas Connecté -->
         <div id="hide" class="menu">
-          <h3 class="title-menu">Mon profil</h3>
+          <h3 class="title-menu">Bienvenue</h3>
           <ul class="ul">
-            <li class="li"><a class="a" data-toggle="modal" data-target="#myModal" href="">Inscription/Connexion</a></li>
-            <!-- <li class="li"><a class="a" href="chart.php">Mon espace</a></li> -->
-            <!-- echo "<li><a class='a linkheader topleft' href='chart.php'>Mon espace</a></li>"; -->
+            <li class="li"><a class="a fancy" data-toggle="modal" data-target="#myModal" href="">Inscription/Connexion</a></li>
             <li class="li"><a class="a fancy" href="aboutus.php">Qui sommes nous ?</a></li>
             <li class="li"><a class="a fancy" href="contact.php">Contact</a></li>
-            <li class="li"><a class="a fancy" href="deconnexion.php">Déconnexion</a></li>
           </ul>
         </div>
       <?php } ?>
     </div>
-    </div>
+    <!-- </div>
+  </div> -->
   </header>

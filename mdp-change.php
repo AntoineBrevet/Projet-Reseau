@@ -19,22 +19,45 @@ include('inc/header.php');
             <!-- <p id="txt-para-change">Veuillez entrer votre nouveau mot de passe.</p> -->
             <form action="" method="post" style="margin-top: 50px;">
                 <div class="form-floating mb-3 input-mdp-change" class="input-mdp-change">
-                    <input type="text" name="mdp1" id="mdp1" placeholder="Mot de passe" class="form-control">
+                    <input type="password" name="mdp1" id="mdp1" placeholder="Mot de passe" class="form-control">
                     <label for="mdp">Mot de passe</label>
                 </div>
                 <div id="contrainte">
-                    <span id="contrainte1"><img src="assets/ico/sue-check-grey.svg" id="contrainte1img"> 1 majuscule</span>
-                    <span id="contrainte2"><img src="assets/ico/sue-check-grey.svg" id="contrainte2img"> 1 minuscule</span>
-                    <span id="contrainte3"><img src="assets/ico/sue-check-grey.svg" id="contrainte3img"> 1 chiffre</span>
-                    <span id="contrainte4"><img src="assets/ico/sue-check-grey.svg" id="contrainte4img"> 1 caractère spécial</span>
-                    <span id="contrainte5"><img src="assets/ico/sue-check-grey.svg" id="contrainte5img"> 8 caractères minimum</span>
+                    <span id="contrainte1">
+                        <!-- <img src="assets/ico/sue-check-grey.svg" id="contrainte1img"> -->
+                        <i id="contrainte1img" class="fas fa-check"></i>
+                        1 majuscule
+                    </span>
+                    <span id="contrainte2">
+                        <!-- <img src="assets/ico/sue-check-grey.svg" id="contrainte2img"> -->
+                        <i id="contrainte2img" class="fas fa-check"></i>
+                        1 minuscule
+                    </span>
+                    <span id="contrainte3">
+                        <!-- <img src="assets/ico/sue-check-grey.svg" id="contrainte3img"> -->
+                        <i id="contrainte3img" class="fas fa-check"></i>
+                        1 chiffre
+                    </span>
+                    <span id="contrainte4">
+                        <!-- <img src="assets/ico/sue-check-grey.svg" id="contrainte4img"> -->
+                        <i id="contrainte4img" class="fas fa-check"></i>
+                        1 caractère spécial
+                    </span>
+                    <span id="contrainte5">
+                        <!-- <img src="assets/ico/sue-check-grey.svg" id="contrainte5img"> -->
+                        <i id="contrainte5img" class="fas fa-check"></i>
+                        8 caractères minimum
+                    </span>
                 </div><br>
                 <div class="form-floating mb-3 input-mdp-change">
-                    <input type="text" name="mdp2" id="mdp2" placeholder="Confirmer mot de passe" class="form-control">
+                    <input type="password" name="mdp2" id="mdp2" placeholder="Confirmer mot de passe" class="form-control">
                     <label for="mdp">Confirmer le mot de passe</label>
                 </div>
                 <div>
-                    <span id="contrainte6"><img src="assets/ico/sue-check-grey.svg" id="contrainte6img"> Mot de passe identique</span>
+                    <span id="contrainte6">
+                        <i id="contrainte6img" class="fas fa-check"></i>
+                        Mot de passe identique
+                    </span>
                 </div><br>
                 <div id="btn-change">
                     <input type="submit" value="Changer de mot de passe" id="change" class="btn btn-primary btn-lg btn-block">
@@ -73,21 +96,18 @@ if (!empty($_POST)) {
         $ver->execute();
         $datecheck = $ver->fetch();
         debug($datecheck);
-        if (date("Y-m-d H:i:s")<$datecheck['token_at']){
+        if (date("Y-m-d H:i:s") < $datecheck['token_at']) {
             //Crypte le MDP
-        $hashed_mdp = password_hash($mdp, PASSWORD_DEFAULT);
+            $hashed_mdp = password_hash($mdp, PASSWORD_DEFAULT);
 
 
-        //Insert dans la BDD les infos de l'utilisateur
-        $req = $pdo->prepare("UPDATE `res_users` SET `password` = '$hashed_mdp' WHERE token='$token'");
-        $req->execute();
-        debug($req);
+            //Insert dans la BDD les infos de l'utilisateur
+            $req = $pdo->prepare("UPDATE `res_users` SET `password` = '$hashed_mdp' WHERE token='$token'");
+            $req->execute();
+            debug($req);
+        } else {
+            echo ("Temps limite dépassé");
         }
-        else{
-            echo("Temps limite dépassé");
-        }
-
-        
     }
 }
 

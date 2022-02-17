@@ -133,7 +133,7 @@ $(document).on('click', '#connexion', function (event) {
     }
 });
 
-// $("#connexion-body").hide();
+$("#connexion-body").hide();
 
 // //Affiche l'inscription et fait disparaitre la connexion
 
