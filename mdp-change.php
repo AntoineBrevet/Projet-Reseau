@@ -1,6 +1,9 @@
 <?php
 include('inc/pdo.php');
 include('fonctions.php');
+
+$title = 'Changer de mot de passe';
+
 include('inc/header.php');
 ?>
 

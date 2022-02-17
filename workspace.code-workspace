@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\htdocs\\projet-reseaux"
+		},
+		{
+			"path": "..\\test_charts"
+		}
+	],
+	"settings": {}
+}

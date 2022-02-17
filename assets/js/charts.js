@@ -3,6 +3,7 @@ $(document).ready(function () {
     // CHARTS
 
     var ctx0 = document.getElementById('chart_tramesParProtocol').getContext('2d');
+
     $.ajax({
         type: 'POST',
         url: 'tramesParProtocol.php',
@@ -94,7 +95,7 @@ $(document).ready(function () {
         dataType: 'JSON',
         data: {},
         success: function (data) {
-            console.log(data);
+            // console.log(data);
             var chart = new Chart(ctx2, {
                 // The type of chart we want to create
                 type: 'line',
@@ -433,14 +434,14 @@ $(document).ready(function () {
             console.log(thrownError);
         }
     })
-
-    // DASHBOARD ===================================================================================
-    $('#log_table').DataTable();
     
+    // DASHBOARD ===================================================================================
+    
+    $('#log_table').DataTable();
     //CLICK => LOG
     $('#btn-log').on('click', function (e) {
         e.preventDefault()
-
+        
         $('#btn-log').css('background-color', '#b1aeae')
         $('#btn-chart').css('background-color', '#ececec')
         $('#container-log').css('display', 'block')
@@ -454,4 +455,5 @@ $(document).ready(function () {
         $('#container-chart').css('display', 'block')
         $('#container-log').css('display', 'none')
     })
+    
 });

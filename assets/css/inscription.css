@@ -1,0 +1,162 @@
+#contrainte1, #contrainte2, #contrainte3, #contrainte4, #contrainte5, #contrainte6 {
+    color: grey;
+    /* margin-left: 50px; */
+}
+#contrainte1img, #contrainte2img, #contrainte3img, #contrainte4img, #contrainte5img{
+    margin-right: 13px;
+}
+
+#contrainte6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+#contrainte6img{
+    margin-right: 10px;
+}
+
+.modal-title {
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+#onglet-css {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+#mdp-reset-css {
+    text-align: center;
+}
+
+#contrainte {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+#btnins {
+	background-color: #D3D3D3;
+}
+#btnins, #btnco {
+    border-radius: 5px;
+}
+
+/* #femme, #homme {
+    margin-top: 5px;
+} */
+
+.sexe {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.form-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sexe{
+    margin-right: 15px;
+}
+.modal-dialog {
+    max-width: 600px;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #272A5F;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #DD4190;
+    box-shadow: none;
+}
+
+.fa-check{
+    width: 3%;
+    /* font-size: 15px; */
+    color: lightgray;
+    /* background-color: red; */
+}
+
+/* MODAL CONNEXION-INSCRIPTION ========================================= */
+
+/* #submitted-in, #submitted-co {
+    background-color: #fdcd3b;
+    border-color: #fdcd3b;
+    color: #101413;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+#submitted-in:hover, #submitted-co:hover {
+    color: #fff;
+}
+
+.modal-title button {
+    background-color: #fff;
+    font-size: 20px;
+}
+
+.modal-title {
+    width: 100%;
+}
+
+.btn-modal {
+    text-align: center;
+}
+
+#form-inscription {
+    display: none;
+}
+
+.form-submit {
+    margin-top: 40px;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid lightgrey;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #F5C72F;
+    box-shadow: none;
+}
+
+.form-group input[type=submit] {
+    border-radius: 5px;
+    border: none;
+}
+
+.modal-body {
+    height: 350px;
+    text-align: center;
+}
+
+#form-connexion .form-control {
+    margin-bottom: 35px;
+}
+
+.custom-line {
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+} */

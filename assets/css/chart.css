@@ -1,16 +1,21 @@
 body {
-  /* background-color: #272A5F; */
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Cabin', sans-serif;
+	/* background-color: #272A5F; */
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Cabin', sans-serif;
 }
+
+header {
+	height: 73px;
+}
+
 /* DASHBOARD ================================================*/
 
 .container-dashboard {
 	display: flex;
 	justify-content: space-between;
 	height: 100%;
-  padding: 100px 40px 40px;
+	padding: 100px 20px 40px;
 	/* margin: 100px 20px 20px 20px; */
 }
 
@@ -59,7 +64,7 @@ body {
 
 #container-chart {
 	width: 90%;
-  padding: 20px 10px;
+	padding: 20px 10px;
 	margin: 45px auto;
 }
 
@@ -72,13 +77,13 @@ body {
 .btn-title-dashboard {
 	background: none;
 	width: 100%;
-	padding: 10px;
+	padding: 15px 10px;
 	font-size: 20px;
 	display: flex;
 	justify-content: space-between;
-  align-items: center;
-  border: none;
-  cursor: pointer;
+	align-items: center;
+	border: none;
+	cursor: pointer;
 }
 
 #btn-chart {
@@ -90,12 +95,40 @@ body {
 }
 
 .content-button {
-	width: 70%;
+	width: 80%;
+	font-size: 20px;
+	font-weight: bold;
 	text-align: left;
 }
 
 
 /* LOGS ================================================================ */
+
+#log_table_filter {
+	margin-bottom: 10px;
+}
+
+.Table_Div {
+	overflow-x: auto;
+}
+
+/* 
+.User_Table {
+	width: 100%;
+
+	border-collapse: collapse;
+}
+
+.User_Table th {
+	text-align: left;
+	color: white;
+	border-right: 1px solid #ccc;
+	background-color: #00920c;
+}
+
+.User_Table tbody td {
+	border: 1px solid #f1f1f1;
+} */
 
 
 table {
@@ -104,7 +137,9 @@ table {
 	height: 100%;
 	text-align: center;
 	box-shadow: 0 1px 22px -12px #101413;
-  border-collapse: collapse;
+	border-collapse: collapse;
+	font-size: 15px;
+	/* font-size: 15px; grand écran */
 	/* border-radius: 5px; */
 }
 
@@ -115,7 +150,7 @@ th, td {
 th {
 	background-color: #272A5F;
 	text-transform: uppercase;
-  color: #fff;
+	color: #fff;
 }
 
 tr:nth-child(odd) {
@@ -155,16 +190,106 @@ tr:nth-child(odd) {
 	margin-bottom: 1%;
 	/* padding: 25px; 
 	border-radius: 30px;  */
-	background-color: #fff;
-	box-shadow: 0 1px 22px -12px #607D8B;
+	/* background-color: #fff; */
+	/* box-shadow: 0 1px 22px -12px #607D8B; */
 }
 
 .big-chart {
+	display: flex;
+	flex-wrap: wrap;
 	width: 48%;
 	height: 100%;
-	margin-bottom: 1%;
+	margin-bottom: 7%;
 	/* padding: 25px; */
 	/* border-radius: 30px; */
-	background-color: #fff;
-	box-shadow: 0 1px 22px -12px #607D8B;
+	/* background-color: #fff; */
+	/* box-shadow: 0 1px 22px -12px #607D8B; */
+}
+
+.rond {
+	width: 40%;
+}
+
+.content {
+	margin-top: 50px;
+}
+
+.pagination {
+	margin-top: 1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style-type: none;
+}
+
+.page-item {
+	cursor: pointer;
+	margin-left: 15px;
+	border: 2px solid #272A5F;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+
+.page-link {
+	text-decoration: none;
+	color: #000;
+}
+
+
+@media only screen and (max-width: 1280px) {
+	table{
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 420px) {
+	/* .page-id-3 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	} */
+
+	.container-dashboard {
+		display: flex;
+		flex-direction: column;
+		padding: 0 20px 40px;
+	}
+
+	#btn-chart {
+		margin-top: 0;
+		border-radius: 5px 5px 0 0;
+	}
+
+	#btn-log {
+		border-radius: 0 0 5px 5px;
+	}
+
+	#title-dashboard {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.body-dashboard {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.table {
+		font-size: 13px;
+	}
+
+	.big-chart {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+
+	.rond {
+		width: 100%;
+	}
+
+	
+	/* .img-header{
+		width: 80%;
+	} */
 }

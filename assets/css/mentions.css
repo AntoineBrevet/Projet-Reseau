@@ -1,0 +1,42 @@
+header {
+  height: 92px;
+}
+
+.title-mentions {
+  padding: 30px;
+  margin-bottom: 40px;
+  background-color: #bbb9b9;
+}
+
+.legale {
+  padding: .1px 70px;
+  margin-bottom: 50px;
+  /* font-size: 20px; */
+}
+
+.text-mentions {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+p {
+  width: 100%;
+}
+
+@media only screen and (max-width: 420px) {
+  h3 {
+    font-size: 15px;
+  }
+
+  .text-mentions {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
+  .legale {
+    padding: .1px 20px;
+    margin-bottom: 50px;
+    /* font-size: 20px; */
+  }
+
+}
