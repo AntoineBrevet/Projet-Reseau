@@ -1,8 +1,57 @@
 $(document).ready(function () {
 
-    // CHARTS
-
     var ctx0 = document.getElementById('chart_tramesParProtocol').getContext('2d');
+    var ctx = document.getElementById('chart_lostTTLParProtocol').getContext('2d');
+    var ctx2 = document.getElementById('chart_tramesParJour').getContext('2d');
+    var ctx3 = document.getElementById('chart_status').getContext('2d');
+    var ctx4 = document.getElementById('chart_failParProtocol').getContext('2d');
+    var ctx5 = document.getElementById('chart_tramesParIpFrom').getContext('2d');
+    var ctx6 = document.getElementById('chart_tramesParIpDest').getContext('2d');
+    var ctx7 = document.getElementById('chart_failsParIpFrom').getContext('2d');
+    var ctx8 = document.getElementById('chart_failsParIpDest').getContext('2d');
+    var ctx9 = document.getElementById('chart_failsParJour').getContext('2d');
+
+    var $sel = $("#IDchart-select");
+
+    $sel.on("change",function() {
+        $('.big-chart').css("display", "none");
+        var value = $(this).val();
+        switch(value) {
+            case 'tramesParJour' : 
+                $('#IDtramesParJour').css("display", "flex");
+            break;
+            case 'tramesParProtocol' : 
+                $('#IDtramesParProtocol').css("display", "flex");
+            break;
+            case 'lostTTLParProtocol' : 
+                $('#IDlostTTLParProtocol').css("display", "flex");
+            break;
+            case 'failParProtocol' : 
+                $('#IDfailParProtocol').css("display", "flex");
+            break;
+            case 'failsParIpFrom' : 
+                $('#IDfailsParIpFrom').css("display", "flex");
+            break;
+            case 'failsParIpDest' : 
+                $('#IDfailsParIpDest').css("display", "flex");
+            break;
+            case 'failsParJour' : 
+                $('#IDfailsParJour').css("display", "flex");
+            break;
+            case 'tramesParIpFrom' : 
+                $('#IDtramesParIpFrom').css("display", "flex");
+            break;
+            case 'tramesParIpDest' : 
+                $('#IDtramesParIpDest').css("display", "flex");
+            break;
+            case 'status' : 
+                $('#IDstatus').css("display", "flex");
+            break;
+        }
+    }).trigger("change"); // initial call
+   
+
+    
 
     $.ajax({
         type: 'POST',
@@ -34,7 +83,7 @@ $(document).ready(function () {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Trames / Protocol'
+                            text: 'Trames / Protocole'
                         }
                     }
                 }
@@ -48,7 +97,7 @@ $(document).ready(function () {
         }
     })
 
-    var ctx = document.getElementById('chart_lostTTLParProtocol').getContext('2d');
+    
     $.ajax({
         type: 'POST',
         url: 'lostTTLparProtocol.php',
@@ -88,7 +137,6 @@ $(document).ready(function () {
         }
     })
 
-    var ctx2 = document.getElementById('chart_tramesParJour').getContext('2d');
     $.ajax({
         type: 'POST',
         url: 'tramesParJour.php',
@@ -133,8 +181,9 @@ $(document).ready(function () {
             console.log(thrownError);
         }
     })
+    
 
-    var ctx3 = document.getElementById('chart_status').getContext('2d');
+    
     $.ajax({
         type: 'POST',
         url: 'status.php',
@@ -177,7 +226,7 @@ $(document).ready(function () {
         }
     })
 
-    var ctx4 = document.getElementById('chart_failParProtocol').getContext('2d');
+    
     $.ajax({
         type: 'POST',
         url: 'failParProtocol.php',
@@ -192,7 +241,7 @@ $(document).ready(function () {
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label: 'Disabled frames',
+                        label: 'Trames désactivées',
                         backgroundColor: 'rgb(255, 99, 132)',
                         data: Object.values(data)
                     }]
@@ -202,7 +251,7 @@ $(document).ready(function () {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Disabled frames / Protocol'
+                            text: 'Trames désactivées / Protocole'
                         }
                     },
                     scales: {
@@ -220,7 +269,7 @@ $(document).ready(function () {
         }
     })
 
-    var ctx5 = document.getElementById('chart_tramesParIpFrom').getContext('2d');
+    
     $.ajax({
         type: 'POST',
         url: 'tramesParIpFrom.php',
@@ -262,7 +311,7 @@ $(document).ready(function () {
         }
     })
 
-    var ctx6 = document.getElementById('chart_tramesParIpDest').getContext('2d');
+    
     $.ajax({
         type: 'POST',
         url: 'tramesParIpDest.php',
@@ -306,7 +355,7 @@ $(document).ready(function () {
         }
     })
 
-    var ctx7 = document.getElementById('chart_failsParIpFrom').getContext('2d');
+    
     $.ajax({
         type: 'POST',
         url: 'failsParIpFrom.php',
@@ -321,7 +370,7 @@ $(document).ready(function () {
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label: 'Disabled frames',
+                        label: 'Trames désactivées',
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
@@ -335,7 +384,7 @@ $(document).ready(function () {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Disabled frames / IP_from'
+                            text: 'Trames désactivées / IP_from'
                         }
                     },
                 }
@@ -348,7 +397,7 @@ $(document).ready(function () {
         }
     })
 
-    var ctx8 = document.getElementById('chart_failsParIpDest').getContext('2d');
+    
     $.ajax({
         type: 'POST',
         url: 'failsParIpDest.php',
@@ -363,7 +412,7 @@ $(document).ready(function () {
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label: 'Disabled frames',
+                        label: 'Trames désactivées',
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
@@ -379,7 +428,7 @@ $(document).ready(function () {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Disabled frames / IP_dest'
+                            text: 'Trames désactivées / IP_dest'
                         }
                     },
                 }
@@ -392,7 +441,7 @@ $(document).ready(function () {
         }
     })
 
-    var ctx9 = document.getElementById('chart_failsParJour').getContext('2d');
+    
     $.ajax({
         type: 'POST',
         url: 'failsParJour.php',
@@ -407,7 +456,7 @@ $(document).ready(function () {
                 data: {
                     labels: Object.keys(data),
                     datasets: [{
-                        label: 'Disabled frames',
+                        label: 'Trames désactivées',
                         backgroundColor: 'rgb(255, 99, 132)',
                         data: Object.values(data),
                     }]
@@ -417,7 +466,7 @@ $(document).ready(function () {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Disabled frames / Day'
+                            text: 'Trames désactivées / Jour'
                         }
                     },
                     scales: {

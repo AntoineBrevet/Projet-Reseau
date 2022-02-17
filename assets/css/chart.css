@@ -199,17 +199,21 @@ tr:nth-child(odd) {
 .big-chart {
 	display: flex;
 	flex-wrap: wrap;
-	width: 48%;
+	width: 80%;
 	height: 100%;
 	margin-bottom: 7%;
+	margin-left: 7%;
+	display: none;
+
 	/* padding: 25px; */
 	/* border-radius: 30px; */
 	/* background-color: #fff; */
 	/* box-shadow: 0 1px 22px -12px #607D8B; */
 }
 
+
 .rond {
-	width: 40%;
+	width: 60%;
 }
 
 .content {
