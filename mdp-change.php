@@ -95,16 +95,14 @@ if (!empty($_POST)) {
         $ver = $pdo->prepare("SELECT token_at FROM res_users WHERE token='$token'");
         $ver->execute();
         $datecheck = $ver->fetch();
-        debug($datecheck);
+        
         if (date("Y-m-d H:i:s") < $datecheck['token_at']) {
             //Crypte le MDP
             $hashed_mdp = password_hash($mdp, PASSWORD_DEFAULT);
 
-
             //Insert dans la BDD les infos de l'utilisateur
             $req = $pdo->prepare("UPDATE `res_users` SET `password` = '$hashed_mdp' WHERE token='$token'");
             $req->execute();
-            debug($req);
         } else {
             echo ("Temps limite dépassé");
         }
