@@ -66,8 +66,6 @@ include('inc/header.php');
             </form>
         </div>
     </div>
-
-
 </main>
 
 <?php

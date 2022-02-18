@@ -27,12 +27,12 @@ if (!empty($_POST)) {
         $ver->execute();
         $users = $ver->fetch();
         if ($users) {
-            echo ("L'adresse email est déjà utilisée!");
+            header('location: email.php');
         } else {
             //Insert dans la BDD les infos de l'utilisateur
             $req = $pdo->prepare("INSERT INTO res_users (surname, name, sexe, date_naissance, email,password,created_at) VALUES ('$nom', '$prenom', '$sexe', '$date', '$email', '$hashed_mdp',NOW())");
             $req->execute();
-            header('Location: chart.php');
+            header('Location: index.php');
         }
     }
 }
