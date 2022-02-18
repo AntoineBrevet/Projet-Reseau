@@ -1,20 +1,22 @@
 <?php
+session_start();
 include('inc/pdo.php');
 include('fonctions.php');
+include('inscription-connexion.php');
 
 $title = 'Récuperation du mot de passe';
 
 include('inc/header.php');
 include('testphpMailer.php');
 
-error_reporting(E_ALL|E_STRICT);
+error_reporting(E_ALL | E_STRICT);
 ini_set('display_errors', 1);
 
 ?>
 
 
 
-<main>
+<div class="bodu">
     <div id="page-mdp-reset">
         <div id="img-mdp-reset">
             <img src="assets/img/forgot_password.svg" id="img-mdp-reset-container">
@@ -22,18 +24,23 @@ ini_set('display_errors', 1);
         <div id="txt-mdp-reset">
             <h2 id="txt-titre-reset">Mot de passe oublié</h2>
             <p id="txt-para-reset">Vous allez recevoir un e-mail pour rénitialiser votre mot de passe.</p>
-            <form action="#" method="post">
+            <form action="#" method="post" class="form-reset">
                 <div class="form-floating mb-3 input-mdp-reset">
-                    <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+
+                    <input type="email" name="email" id="email" placeholder="Email" class="form-control input-reset">
+
                     <label for="email" id="email-label">Veuillez entrer votre adresse e-mail</label>
+
                 </div>
-                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Envoyer mail">
+
+                <input class="btn btn-primary btn-lg btn-block btn-reset" type="submit" value="Envoyer mail">
             </form>
 
         </div>
     </div>
 
-</main>
+</div>
+<!-- </main> -->
 
 <?php
 include('inc/footer.php');
@@ -60,9 +67,9 @@ if (empty($_POST["email"])) {
     $ver = $pdo->prepare("SELECT * FROM res_users WHERE email='$email'");
     $ver->execute();
     $emailcheck = $ver->fetchAll();
-    if (!empty($emailcheck)){
+    if (!empty($emailcheck)) {
         $datenow = date("Y-m-d H:i:s");
-        $date = date('Y-m-d H:i:s',strtotime('+5 minutes',strtotime($datenow)));
+        $date = date('Y-m-d H:i:s', strtotime('+5 minutes', strtotime($datenow)));
 
         //Insert le token et la date limite du token dans la BDD
         $req = $pdo->prepare("UPDATE `res_users` SET `token` = '$token', `token_at` = '$date' WHERE email='$email'");
@@ -71,16 +78,13 @@ if (empty($_POST["email"])) {
         $link = "http://localhost/Projet-Reseau/mdp-change.php?token=" . $token;
 
         $result = smtpmailer($email, 'Support FrameIP', 'FrameIP Assistance', 'Reset mdp', $link);
-        if (true !== $result)
-        {
+        if (true !== $result) {
             // erreur -- traiter l'erreur
             echo $result;
         }
+    } else {
+        echo ("Email non existant");
     }
-    else{
-        echo("Email non existant");
-    }  
-    
 }
 
 ?>

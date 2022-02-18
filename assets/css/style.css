@@ -17,6 +17,7 @@
 */
 html, body {
   height: 100%;
+  max-width: 100%;
 }
 
 /*
@@ -105,24 +106,33 @@ body {
 .header-container.active {
   background: #272A5F;
 }
-.header-left{
-  width: 30%;
+
+.header-left {
+  width: 25%;
 }
+
 .img-header {
   width: 100%;
 }
 
-.header-center{
+/* .header-center{
   margin-right: 200px;
   margin-top: 10px;
-}
+} */
 .hello {
-  color: #fff!important;
+  color: #fff !important;
   /* padding: 10px 90px; */
-  /* margin-right: 100px; */
-  margin-top: 10px;
+  margin-right: 30px;
+  /* margin-top: 10px; */
   font-size: 30px;
-  font-weight: bold;
+  /* font-weight: bold; */
+}
+
+.header-right {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .fa-user-circle {
@@ -148,11 +158,12 @@ body {
   /* box-shadow: 0px 5px 5px 0px #F5C72F; */
   padding: 12px 16px;
   z-index: 1;
-  right: 30px;
-  top: 40px;
+  right: 40px;
+  top: 85px;
   border-radius: 10px;
   background-color: #272A5F;
   color: #fff;
+  /* border: 2px solid white; */
 }
 
 .title-menu {
@@ -319,6 +330,7 @@ a.fancy:hover {
 
 .box {
   line-height: 1.5;
+  margin-left: 30px;
 }
 
 .title-contact {
@@ -343,7 +355,7 @@ a.fancy:hover {
 }
 
 .bottom-text {
-  width: 30%;
+  width: 33%;
 }
 
 .linktext {
@@ -397,7 +409,7 @@ a.fancy:hover {
 .about-para {
   text-align: justify;
   padding: 0 20px;
-  margin-bottom: 50px auto;
+  margin: 0 30px 50px;
 }
 
 .img-slides {
@@ -497,6 +509,10 @@ a.fancy:hover {
 
   header {
     height: 13px;
+  }
+
+  .header-left {
+    width: 25%;
   }
 }
 
@@ -619,9 +635,12 @@ a.fancy:hover {
     font-size: 13px;
   }
 
-  .img-header {
-    width: 80%;
+  .header-left {
+    width: 50%;
   }
+
+  /* .img-header {
+  } */
 
   .copy-little {
     margin-bottom: 20px;
@@ -643,6 +662,7 @@ a.fancy:hover {
   .footer-container {
     height: 100px;
     padding-top: 111px;
+    margin-top: -45px;
   }
 
   .box {
@@ -651,11 +671,17 @@ a.fancy:hover {
 
   .text-box {
     width: 100%;
+    /* margin-bottom: -7px; */
   }
 
   .container {
     padding: 0 40px;
-    margin-bottom: 31px;
+    margin-bottom: 55px;
+  }
+
+  .abou-para {
+    font-size: 18px;
+    margin-top: 34px;
   }
 }
 

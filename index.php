@@ -17,7 +17,15 @@ include('inscription-connexion.php');
 <main>
   <div class="container-body">
     <div class="top-body">
-      <h1 class="body-title">FrameIP un choix évident pour analyser vos réseaux !</h1>
+      <?php
+      if (isset($_SESSION['connected'])) { ?>
+      
+        <h1 class="body-title"><span class="txt-type" data-wait="3000" data-words='["Bonjour <?php echo ucfirst($_SESSION['name']) ?> !", "Vous pouvez désormais accèder à votre espace personnel !"]'></span>|</h1>
+
+      <?php } else { ?>
+        <h1 class="body-title"><span class="txt-type" data-wait="3000" data-words='["FrameIP un choix évident pour analyser vos réseaux !"]'></span>|</h1>
+      <?php } ?>
+      <!-- <h1 class="body-title">FrameIP un choix évident pour analyser vos réseaux !</h1> -->
     </div>
     <div class="middle-body">
       <h2 class="title-services">Services</h2>

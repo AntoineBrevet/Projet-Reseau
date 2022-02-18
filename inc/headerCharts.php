@@ -47,20 +47,20 @@
           <img class="img-header" src="assets/img/logo.png" alt="">
         </a>
       </div>
-      <?php
-        if (isset($_SESSION['connected'])) { ?>
-          <div class="header-center">
-            <p class="hello">Bonjour <?php echo ucfirst($_SESSION['name']) ?></p>
-          </div>
-        <?php } ?>
       <div class="header-right">
+        <?php
+        if (isset($_SESSION['connected'])) { ?>
+          <!-- <div class="header-center"> -->
+          <p class="hello">Bonjour <?php echo ucfirst($_SESSION['name']) ?></p>
+          <!-- </div> -->
+        <?php } ?>
         <i class="far fa-user-circle" id="test"></i>
       </div>
       <!-- Connecté -->
       <?php
       if (isset($_SESSION['connected'])) { ?>
         <div id="hide" class="menu">
-          <h3>Mon profil</h3>
+        <h3 class="title-menu">Mon profil</h3>
           <ul class="ul">
             <li class="li"><a class="a fancy" href="chart.php">Mon espace</a></li>
             <li class="li"><a class="a fancy" href="aboutus.php">Qui sommes nous ?</a></li>

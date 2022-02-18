@@ -6,7 +6,7 @@ include("fonctions.php");
 $title = 'Mon espace';
 include('inc/headerCharts.php');
 
-if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) : 
+if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) :
 
 
     $sql = "SELECT * FROM res_trames ORDER BY date DESC";
@@ -14,9 +14,9 @@ if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) :
     $var->execute();
     $trames = $var->fetchAll();
     // include('modal.php'); 
-    
-    
-    
+
+
+
 ?>
     <div class="wrap-dashboard">
 
@@ -45,45 +45,45 @@ if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) :
                 </div>
             </div>
 
-        <div class="body-dashboard">
-            <!-- CONTAINER DES LOGS display none-->
-            <div id="container-log" class="Table_Div">
+            <div class="body-dashboard">
+                <!-- CONTAINER DES LOGS display none-->
+                <div id="container-log" class="Table_Div">
 
-                <table id="log_table" class="table User-Table flexy">
-                    <thead>
-                        <tr>
-                            <th class="border border-left">Date</th>
-                            <th>Identifiant</th>
-                            <th>Version</th>
-                            <th>Nom du protocole</th>
-                            <th>Flag</th>
-                            <th>TTL</th>
-                            <th>Protocol checksum</th>
-                            <th>Checksum header</th>
-                            <th>Venant de (port)</th>
-                            <th>à destination de (port)</th>
-                            <th>Ip arrivant</th>
-                            <th class="border border-right">Ip destination</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($trames as $trame) {
-                            if ($trame['status'] == 'success') {
-                                echo '<tr class="tr-good">';
-                            } elseif ($trame['status'] == 'timeout') {
-                                echo '<tr class="tr-notgood">';
-                            } ?>
-                            <td><?php echo $trame['date']; ?></td> <!-- bold -->
-                            <td><?php echo $trame['identifiant']; ?></td>
-                            <td><?php echo $trame['version']; ?></td>
-                            <td><?php echo $trame['protocol_name']; ?></td>
-                            <td><?php echo $trame['flags']; ?></td>
-                            <td><?php echo $trame['ttl']; ?></td>
-                            <td><?php echo $trame['protocol_checksum']; ?></td>
-                            <td><?php echo $trame['header_checksum']; ?></td>
-                            <td><?php echo $trame['port_from']; ?></td>
-                            <td><?php echo $trame['port_dest']; ?></td>
-                            <?php
+                    <table id="log_table" class="table User-Table flexy">
+                        <thead>
+                            <tr>
+                                <th class="border border-left">Date</th>
+                                <th>Identifiant</th>
+                                <th>Version</th>
+                                <th>Nom du protocole</th>
+                                <th>Flag</th>
+                                <th>TTL</th>
+                                <th>Protocol checksum</th>
+                                <th>Checksum header</th>
+                                <th>Venant de (port)</th>
+                                <th>à destination de (port)</th>
+                                <th>Ip arrivant</th>
+                                <th class="border border-right">Ip destination</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($trames as $trame) {
+                                if ($trame['status'] == 'success') {
+                                    echo '<tr class="tr-good">';
+                                } elseif ($trame['status'] == 'timeout') {
+                                    echo '<tr class="tr-notgood">';
+                                } ?>
+                                <td><?php echo $trame['date']; ?></td> <!-- bold -->
+                                <td><?php echo $trame['identifiant']; ?></td>
+                                <td><?php echo $trame['version']; ?></td>
+                                <td><?php echo $trame['protocol_name']; ?></td>
+                                <td><?php echo $trame['flags']; ?></td>
+                                <td><?php echo $trame['ttl']; ?></td>
+                                <td><?php echo $trame['protocol_checksum']; ?></td>
+                                <td><?php echo $trame['header_checksum']; ?></td>
+                                <td><?php echo $trame['port_from']; ?></td>
+                                <td><?php echo $trame['port_dest']; ?></td>
+                                <?php
                                 $trame['ip_from'] = ipConvert($trame['ip_from']);
                                 $trame['ip_dest'] = ipConvert($trame['ip_dest']);
                                 ?>
@@ -94,7 +94,7 @@ if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) :
                         </tbody>
                     </table>
 
-            </div>
+                </div>
 
                 <div id="container-chart">
                     <div>
@@ -151,13 +151,13 @@ if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) :
                     </div>
                 </div>
 
+            </div>
+
         </div>
 
-    </div>
-
-<?php 
-                    else :
-                        header('Location:index.php');
-                    endif;
-                        include('inc/footerCharts.php'); 
-?> 
+    <?php
+else :
+    header('Location:404.php');
+endif;
+include('inc/footerCharts.php');
+    ?>

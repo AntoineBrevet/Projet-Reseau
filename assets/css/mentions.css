@@ -5,12 +5,15 @@ header {
 .title-mentions {
   padding: 30px;
   margin-bottom: 40px;
+  color: #000;
   background-color: #bbb9b9;
+  /* width: 100%; */
 }
 
 .legale {
   padding: .1px 70px;
   margin-bottom: 50px;
+  color: #000;
   /* font-size: 20px; */
 }
 
@@ -21,6 +24,15 @@ header {
 
 p {
   width: 100%;
+}
+
+@media only screen and (max-width: 1480px) {
+  .title-mentions{
+    margin: -70px;
+  }
+  .legale{
+    margin-top: 100px;
+  }
 }
 
 @media only screen and (max-width: 420px) {

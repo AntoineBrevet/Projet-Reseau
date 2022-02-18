@@ -40,11 +40,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!-- =================================== CSS =================================== -->
   <!-- <link rel="stylesheet" href="assets/css/mdp-change.css"> -->
-  <link rel="stylesheet" href="assets/css/mdp-reset.css">
   <link rel="stylesheet" href="assets/css/normalize-preloader.css">
   <link rel="stylesheet" href="assets/css/preloader.css">
-  <link rel="stylesheet" href="assets/css/mdp-change.css">
   <link rel="stylesheet" href="assets/css/chart.css">
+  <link rel="stylesheet" href="assets/css/mdp-change.css">
+  <link rel="stylesheet" href="assets/css/mdp-reset.css">
+  <link rel="stylesheet" href="assets/css/inscription.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <title>FrameIP | <?php echo $title; ?></title>
@@ -66,13 +67,11 @@
             <img class="img-header" src="assets/img/logo.png" alt="">
           </a>
         </div>
-        <?php
-        if (isset($_SESSION['connected'])) { ?>
-          <div class="header-center">
-            <p class="hello">Bonjour <?php echo ucfirst($_SESSION['name']) ?></p>
-          </div>
-        <?php } ?>
         <div class="header-right">
+          <!-- <?php
+          if (isset($_SESSION['connected'])) { ?>
+            <p class="hello">Bonjour <?php echo ucfirst($_SESSION['name']) ?></p>
+          <?php } ?> -->
           <i class="far fa-user-circle" id="test"></i>
         </div>
         <!-- Connecté -->
