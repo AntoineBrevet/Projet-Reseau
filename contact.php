@@ -21,7 +21,7 @@ include('inc/header.php');
         </div>
         <div class="text-box bottom-text">
             <a class="linktext" target="_blank" href="mailto:frameipassistance@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> E-Mail: frameipassistance@gmail.com</a>
-            <a class="linktext" target="_blank" href="https://twitter.com" title="color space twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter: https://twitter.com</a><br>
+            <a class="linktext" target="_blank" href="https://twitter.com/frameip" title="color space twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter: https://twitter.com/frameip</a><br>
         </div>
 
     </div>

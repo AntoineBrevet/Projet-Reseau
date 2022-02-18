@@ -417,6 +417,27 @@ a.fancy:hover {
   width: 10%;
 }
 
+
+
+/* ======================================== ERREUR ======================================== */
+.erreur{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.title-erreur{
+  color: #fff!important;
+}
+.link-erreur{
+  text-decoration: none;
+  color: #fff;
+}
+.link-erreur:hover{
+  text-decoration: none;
+  color: red;
+}
 /* ======================================== FOOTER ======================================== */
 
 footer{

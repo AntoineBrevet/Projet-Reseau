@@ -75,9 +75,9 @@ if (empty($_POST["email"])) {
         $req = $pdo->prepare("UPDATE `res_users` SET `token` = '$token', `token_at` = '$date' WHERE email='$email'");
         $req->execute();
 
-        $link = "http://localhost/Projet-Reseau/mdp-change.php?token=" . $token;
+        $link = "Vous avez 5 minutes pour changer votre mot de passe. Veuillez cliquer sur le lien suivant : \r\n  http://localhost/Projet-Reseau/mdp-change.php?token=" . $token;
 
-        $result = smtpmailer($email, 'Support FrameIP', 'FrameIP Assistance', 'Reset mdp', $link);
+        $result = smtpmailer($email, 'Support FrameIP', 'FrameIP Assistance', 'Changement de mot de passe', $link);
         if (true !== $result) {
             // erreur -- traiter l'erreur
             echo $result;

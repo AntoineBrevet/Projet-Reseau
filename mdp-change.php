@@ -68,27 +68,24 @@ include('inc/header.php');
     </div>
 </main>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="mdp-change.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="mdp-change.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <?php
 include('inc/footer.php');
-?>
-
-<?php
 
 //Check si le formulaire n'est pas vide
 if (!empty($_POST)) {
 
     //Check si tous les champs sont remplis ou non ou les conditions sont remplis ou non
-    if (strlen($_POST["mdp1"]) < 8 || (preg_match('/[a-z]/', $_POST["mdp1"]) == 0) || (preg_match('/[A-Z]/', $_POST["mdp1"]) == 0) || (preg_match('/[0-9]/', $_POST["mdp1"]) == 0) || ((preg_match('/[!-.]/', $_POST["mdp1"]) == 0) && (preg_match('/[:-@]/', $_POST["mdp1"]) == 0) && (preg_match('/[[-`]/', $_POST["mdp1"]) == 0) && (preg_match('/[{-~]/', $_POST["mdp1"]) == 0)) || $_POST["mdp2"] !== $_POST["mdp1"]) {
-        echo ("Tous les champs ne sont pas remplis ou respectés!!!");
+    if (strlen($_POST["mdp1change"]) < 8 || (preg_match('/[a-z]/', $_POST["mdp1change"]) == 0) || (preg_match('/[A-Z]/', $_POST["mdp1change"]) == 0) || (preg_match('/[0-9]/', $_POST["mdp1change"]) == 0) || ((preg_match('/[!-.]/', $_POST["mdp1change"]) == 0) && (preg_match('/[:-@]/', $_POST["mdp1change"]) == 0) && (preg_match('/[[-`]/', $_POST["mdp1change"]) == 0) && (preg_match('/[{-~]/', $_POST["mdp1change"]) == 0)) || $_POST["mdp2change"] !== $_POST["mdp1change"]) {
+        // echo ("Tous les champs ne sont pas remplis ou respectés!!!");
     } else {
-        echo ("Tous les champs sont bien remplis!!!");
+        // echo ("Tous les champs sont bien remplis!!!");
 
-        $mdp = $_POST['mdp1'];
+        $mdp = $_POST['mdp1change'];
 
         $token = $_GET['token'];
 
@@ -103,8 +100,9 @@ if (!empty($_POST)) {
             //Insert dans la BDD les infos de l'utilisateur
             $req = $pdo->prepare("UPDATE `res_users` SET `password` = '$hashed_mdp' WHERE token='$token'");
             $req->execute();
+            // header('Location:index.php');
         } else {
-            echo ("Temps limite dépassé");
+            // echo ("Temps limite dépassé");
         }
     }
 }

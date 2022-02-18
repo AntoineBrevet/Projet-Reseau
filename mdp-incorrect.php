@@ -8,12 +8,14 @@ include('inc/header.php');
 ?>
 
 <main>
-    <div class="alert alert-danger" role="alert">
-        <h1>
+    <div class="erreur" role="alert">
+        <h1 class="title-erreur">
             Mot de passe ou adresse email incorrect
         </h1>
-        <p>Cliquez ici pour réessayer</p>
-        <a href="index.php">Retour à l'accueil</a>
+
+        <a class="link-erreur" href="index.php">
+            <p>Cliquez ici pour réessayer</p>
+        </a>
     </div>
 
 </main>

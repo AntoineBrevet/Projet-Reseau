@@ -1,10 +1,7 @@
 <?php
 include('inc/headerModal.php');
 ?>
-<!-- <body> -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-        Inscription/connexion
-    </button> -->
+
 
 <!-- The Modal -->
 <div class="modal" id="myModal">
@@ -132,5 +129,4 @@ include('inc/headerModal.php');
 
 
 <?php
-
 include('inc/footer-modal.php');

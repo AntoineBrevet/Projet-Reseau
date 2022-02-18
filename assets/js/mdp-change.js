@@ -99,7 +99,7 @@ $(document).on('input', '#mdp1change', function () {
 $(document).on('input', '#mdp1change,#mdp2change', function () {
     if (($("#mdp1change").val() == $("#mdp2change").val()) && $("#mdp2change").val().length >= 1) {
         $("#contrainte6change").css("color", "green");
-        $("#contrainte6changeimg").attr("color", "green")
+        $("#contrainte6changeimg").css("color", "green")
     }
     else {
         $("#contrainte6change").css("color", "#fff");
