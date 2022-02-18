@@ -1,9 +1,9 @@
 <?php
 session_start();
 require('inc/pdo.php');
+$title = 'Mentions Légales';
 include('inscription-connexion.php');
 
-$title = 'Mentions Légales';
 
 include('inc/headerall.php'); ?>
 

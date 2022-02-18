@@ -2,9 +2,9 @@
 session_start();
 include('inc/pdo.php');
 include('fonctions.php');
+$title = 'Récuperation du mot de passe';
 include('inscription-connexion.php');
 
-$title = 'Récuperation du mot de passe';
 
 include('inc/header.php');
 include('testphpMailer.php');

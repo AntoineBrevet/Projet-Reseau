@@ -157,24 +157,21 @@ tr:nth-child(odd) {
 .chart-top {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
+	margin-top: 50px;
 }
 
 .chart-bottom {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: 50px 0;
+	justify-content: center;
+	margin-top: 50px;
 }
 
 .litte-chart {
 	width: 30%;
 	height: 100%;
 	margin-bottom: 1%;
-	/* padding: 25px; 
-	border-radius: 30px;  */
-	/* background-color: #fff; */
-	/* box-shadow: 0 1px 22px -12px #607D8B; */
 }
 
 .big-chart {

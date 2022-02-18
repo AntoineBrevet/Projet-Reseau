@@ -200,8 +200,8 @@ $(document).ready(function () {
                     datasets: [{
                         label: 'Statut',
                         backgroundColor: [
-                            'rgb(255, 205, 86)',
-                            'rgb(255, 99, 132)'
+                            'rgb(245, 199, 47)',
+                            'rgb(39, 42, 95)'
                         ],
                         data: Object.values(data),
                         hoverOffset: 4

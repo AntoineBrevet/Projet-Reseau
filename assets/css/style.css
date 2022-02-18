@@ -72,6 +72,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* ========================== BODY ========================== */
 body {
+  display: flex;
+  flex-direction: column;
   background-image: url(../img/web-network.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -304,13 +306,6 @@ a.fancy:hover {
 
 /* CONTACT =========================================================== */
 
-/* .wrap-contact {
-  max-width: 1600px;
-  width: 100%;
-  margin: 16% auto;
-  font-size: 1em;
-} */
-
 .container-contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -344,11 +339,11 @@ a.fancy:hover {
 
 .top-text {
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 47px;
 }
 
 .text-box {
-  margin-bottom: 38.5px;
+  /* margin-bottom: 10px; */
   display: flex;
   flex-direction: column;
   font-size: 20px;
@@ -392,7 +387,7 @@ a.fancy:hover {
 
 .about-title {
   /* padding: 30px; */
-  margin: 82px 0 10px;
+  margin: 40px 0 10px;
   color: #fff !important;
   /* background-color: #bbb9b9; */
 }
@@ -418,6 +413,10 @@ a.fancy:hover {
 }
 
 /* ======================================== FOOTER ======================================== */
+footer {
+  margin-top: auto;
+}
+
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -676,7 +675,7 @@ a.fancy:hover {
 
   .container {
     padding: 0 40px;
-    margin-bottom: 55px;
+    /* margin-bottom: 55px; */
   }
 
   .abou-para {

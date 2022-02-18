@@ -1,10 +1,10 @@
 <?php
 session_start();
 include('inc/pdo.php');
+$title = 'Changer de mot de passe';
 include('inscription-connexion.php');
 include('fonctions.php');
 
-$title = 'Changer de mot de passe';
 
 include('inc/header.php');
 ?>

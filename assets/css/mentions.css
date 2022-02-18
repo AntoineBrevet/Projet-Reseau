@@ -7,7 +7,7 @@ header {
   margin-bottom: 40px;
   color: #000;
   background-color: #bbb9b9;
-  /* width: 100%; */
+  width: 105.5%;
 }
 
 .legale {
@@ -25,7 +25,9 @@ header {
 p {
   width: 100%;
 }
-
+.hello{
+  margin-top: 15px;
+}
 @media only screen and (max-width: 1480px) {
   .title-mentions{
     margin: -70px;
