@@ -79,6 +79,9 @@ body {
   background-size: cover;
   font-family: 'Cabin', sans-serif;
   min-height: 100vh;
+}
+
+#body{
   display: flex;
   flex-direction: column;
 }
