@@ -51,7 +51,7 @@
   <title>FrameIP | <?php echo $title; ?></title>
 </head>
 
-<body>
+<body id="body">
   <div id="loader-wrapper">
     <div id="loader"></div>
 
