@@ -38,7 +38,7 @@
 #contrainte {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 15px 0;
 }
 

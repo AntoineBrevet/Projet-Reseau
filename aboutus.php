@@ -13,25 +13,15 @@ include('inc/header.php');
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          <li class="glide__slide img-slides"><img src="assets/img/data_processing.svg" alt=""></li>
-          <li class="glide__slide img-slides"><img src="assets/img/data_trends.svg" alt=""></li>
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/test_img_slide.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_big_tramesday.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_tramesday.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_ttlLost.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_frames_proto.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_frames_ipfrom.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_frames_ipdest.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_framesday.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_statut_global.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/wm_enlarge_graph_trames_proto.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_ipdest.png" alt=""></li> -->
-          <!-- <li class="glide__slide img-slides"><img src="assets/img/graph_ipfrom.png" alt=""></li> -->
+          <li class="glide__slide img-slides"><img src="assets/img/td_proto.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/logs_top.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/round-graph.png" alt=""></li>
+          <li class="glide__slide img-slides"><img src="assets/img/test_photo.png" alt=""></li>
         </ul>
       </div>
       <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prec</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">suiv</button>
       </div>
     </div>
   </div>

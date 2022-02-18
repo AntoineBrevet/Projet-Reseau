@@ -17,7 +17,7 @@ header {
 	justify-content: space-between;
 	height: 100%;
 	padding: 50px 20px 40px;
-	/* margin: 100px 20px 20px 20px; */
+	margin: 170px 30px;
 }
 
 /* FAIRE DES GENERALITES AVEC BODY LOG BODY CHART ET TITLE */
@@ -114,25 +114,6 @@ header {
 	overflow-x: auto;
 }
 
-/* 
-.User_Table {
-	width: 100%;
-
-	border-collapse: collapse;
-}
-
-.User_Table th {
-	text-align: left;
-	color: white;
-	border-right: 1px solid #ccc;
-	background-color: #00920c;
-}
-
-.User_Table tbody td {
-	border: 1px solid #f1f1f1;
-} */
-
-
 table {
 	background-color: #fff;
 	width: 100%;
@@ -199,17 +180,21 @@ tr:nth-child(odd) {
 .big-chart {
 	display: flex;
 	flex-wrap: wrap;
-	width: 48%;
+	width: 80%;
 	height: 100%;
 	margin-bottom: 7%;
+	margin-left: 7%;
+	display: none;
+
 	/* padding: 25px; */
 	/* border-radius: 30px; */
 	/* background-color: #fff; */
 	/* box-shadow: 0 1px 22px -12px #607D8B; */
 }
 
+
 .rond {
-	width: 40%;
+	width: 60%;
 }
 
 .content {
@@ -239,10 +224,15 @@ tr:nth-child(odd) {
 
 
 @media only screen and (max-width: 1280px) {
-	table{
-    font-size: 10px;
-  }
+	table {
+		font-size: 10px;
+	}
+
+	.container-dashboard {
+		margin: 70px 10px;
+	}
 }
+
 @media only screen and (max-width: 420px) {
 	/* .page-id-3 {
 		display: flex;
@@ -254,7 +244,12 @@ tr:nth-child(odd) {
 	.container-dashboard {
 		display: flex;
 		flex-direction: column;
-		padding: 0 20px 40px;
+		padding: 35px 20px 40px;
+	}
+
+	.hello {
+		font-size: 20px;
+		margin-right: 10px;
 	}
 
 	#btn-chart {
@@ -290,7 +285,7 @@ tr:nth-child(odd) {
 		width: 100%;
 	}
 
-	
+
 	/* .img-header{
 		width: 80%;
 	} */

@@ -1,6 +1,3 @@
-<?php
-$title = "inscription-connexion";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
