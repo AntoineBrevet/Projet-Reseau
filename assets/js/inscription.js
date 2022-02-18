@@ -113,7 +113,7 @@ $(document).on('input', '#mdp1,#mdp2', function () {
 
 $(document).on('click', '#inscription', function (event) {
     if ($("#nom").val() && $("#prenom").val() && ($("#homme").is(':checked') || $("#femme").is(':checked')) && $("#date").val() && $("#email").val() && hasUpperCase($("#mdp1").val()) && hasLowerCase($("#mdp1").val()) && hasNumber($("#mdp1").val()) && (hasCS1($("#mdp1").val()) || hasCS2($("#mdp1").val()) || hasCS3($("#mdp1").val()) || hasCS4($("#mdp1").val())) && ($("#mdp1").val().length >= 8) && ($("#mdp1").val() == $("#mdp2").val())) {
-        alert("yoohoo")
+    
     }
     else {
         alert("Des champs ne sont pas remplis! (inscription)")
@@ -125,7 +125,7 @@ $(document).on('click', '#inscription', function (event) {
 
 $(document).on('click', '#connexion', function (event) {
     if ($("#mdp3").val() && $("#email2").val()) {
-        console.log("oui");
+        
     }
     else {
         alert("Des champs ne sont pas remplis! (connexion)");

@@ -43,7 +43,7 @@ include('inc/footer.php');
 
 
 if (empty($_POST["email"])) {
-    echo ("Tous les champs ne sont pas remplis!");
+    // echo ("Tous les champs ne sont pas remplis!");
 } else {
     $email = $_POST['email'];
 

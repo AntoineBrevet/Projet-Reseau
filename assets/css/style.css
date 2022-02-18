@@ -76,6 +76,8 @@ body {
   background-size: cover;
   font-family: 'Cabin', sans-serif;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* .bg-img {
@@ -406,6 +408,11 @@ a.fancy:hover {
 }
 
 /* ======================================== FOOTER ======================================== */
+
+footer{
+  margin-top: auto;
+}
+
 .footer-container {
   display: flex;
   justify-content: space-between;

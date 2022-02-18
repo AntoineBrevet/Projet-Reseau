@@ -31,7 +31,8 @@ if (!empty($_POST)) {
             // echo ("Le MDP est bon!");
             header('Location: chart.php');
         } else {
-            echo ("Le MDP n'est pas le bon!");
+            header('location: mdp-incorrect.php');
         }
     }
 }
+?>
