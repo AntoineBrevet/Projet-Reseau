@@ -32,13 +32,9 @@ input.input-reset{
     border-radius: 10px;
     border: none;
 }
-/* @media only screen and (max-width: 1280px) {
-    #page-mdp-reset {
-        margin-top: 76px;
-        display: flex;
-        padding-top: 150px;
-    }
-} */
+.btn-reset{
+    width: 40%;
+}
 
 @media only screen and (max-width: 420px) {
     #page-mdp-reset{

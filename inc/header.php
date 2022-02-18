@@ -44,8 +44,8 @@
   <link rel="stylesheet" href="assets/css/preloader.css">
   <link rel="stylesheet" href="assets/css/chart.css">
   <link rel="stylesheet" href="assets/css/mdp-change.css">
-  <link rel="stylesheet" href="assets/css/mdp-reset.css">
   <link rel="stylesheet" href="assets/css/inscription.css">
+  <link rel="stylesheet" href="assets/css/mdp-reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <title>FrameIP | <?php echo $title; ?></title>

@@ -33,7 +33,7 @@ ini_set('display_errors', 1);
 
                 </div>
 
-                <input class="btn btn-primary btn-lg btn-block btn-reset" type="submit" value="Envoyer mail">
+                <input class="btn btn-primary btn-lg btn-reset" type="submit" value="Envoyer mail">
             </form>
 
         </div>
