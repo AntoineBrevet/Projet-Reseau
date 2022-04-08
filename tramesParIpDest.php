@@ -5,7 +5,7 @@
 
     // Cf. failsParIpDest.php pour l'explication de code
 
-    include("fonctions.php");
+include("fonctions.php");
 include("inc/pdo.php");
 
 $ip_dest = array();

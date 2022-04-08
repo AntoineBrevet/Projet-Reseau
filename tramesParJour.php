@@ -1,5 +1,3 @@
-
-
 <?php
 
     // Le but de ce script est de générer un json sous la forme d'un tableau sous la forme
